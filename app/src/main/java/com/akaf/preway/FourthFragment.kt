@@ -12,12 +12,24 @@ import android.view.ViewGroup
  */
 class FourthFragment : Fragment() {
 
+
+    companion object {
+        fun newInstance(): FourthFragment {
+            val args = Bundle()
+            val fragment = FourthFragment()
+            fragment.arguments = args
+            return fragment
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fourth, container, false)
+        val view= inflater.inflate(R.layout.fragment_fourth, container, false)
+
+
+        return view
     }
 
 

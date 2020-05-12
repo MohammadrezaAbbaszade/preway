@@ -12,12 +12,24 @@ import android.view.ViewGroup
  */
 class SecondFragment : Fragment() {
 
+
+    companion object {
+        fun newInstance(): SecondFragment {
+            val args = Bundle()
+            val fragment = SecondFragment()
+            fragment.arguments = args
+            return fragment
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false)
+        val view= inflater.inflate(R.layout.fragment_second, container, false)
+
+
+        return view
     }
 
 

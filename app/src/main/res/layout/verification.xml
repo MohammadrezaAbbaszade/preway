@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hq_blue"
+
+    >
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/bg_pattern"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/verification_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:cardBackgroundColor="@color/hq_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginRight="230dp"
+                android:text="@string/login_tootlbar_title"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/ic_left_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/verification_country_name"
+        android:layout_width="380dp"
+        android:layout_height="56.0dip"
+        android:background="@drawable/button_round_purple_border"
+        android:layout_marginTop="72.0dp"
+        android:layout_marginBottom="24.0dip"
+        app:autoSizeMaxTextSize="18.0sp"
+        app:autoSizeMinTextSize="14.0sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verification_toolbar"/>
+
+
+    <RelativeLayout android:id="@+id/verification_phone_number"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verification_country_name"
+        >
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/verification_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="56.0dip"
+            android:background="@drawable/edit_text_radious"
+            android:layout_marginTop="25.0dp"
+            android:layout_marginBottom="24.0dip"
+            app:autoSizeMaxTextSize="18.0sp"
+            app:autoSizeMinTextSize="14.0sp"
+            app:autoSizeTextType="uniform"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/mid_grey"
+            android:hint="@string/Your_phone_number"
+            android:maxLines="1"
+            android:inputType="phone"
+            android:imeOptions="actionGo"
+            android:fontFamily="@font/circularstdbook"
+            android:paddingLeft="64.0dip"
+            android:paddingRight="16.0dip"
+            />
+        <TextView
+            android:id="@+id/verification_phone_input_country_code"
+            android:textSize="18.0sp"
+            android:textColor="@color/text_primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="+98"
+            android:fontFamily="@font/circularstdbook"
+            android:layout_marginLeft="16dp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/verification_submit_btn"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/Next"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.4"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/hq_red"
+        android:fontFamily="@font/circularstdbold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verification_phone_number" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

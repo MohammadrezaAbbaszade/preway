@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">preway</string>
+
+    <string name="Next">مرحله ی بعد</string>
+    <string name="login_tootlbar_title">ثبت نام/ورود</string>
+    <string name="Your_phone_number">شماره تلفن</string>
+    <string name="Get_Help">راهنمایی</string>
+    <string name="Legal">قوانین</string>
+    <string name="play_now">همین حالا بازی کن</string>
+    <string name="Review_Us">امتیاز دهی</string>
+    <string name="Daily_nChallenge">"چالش
+روزانه"</string>
+</resources>

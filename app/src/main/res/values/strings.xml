@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">preway</string>
+
+    <string name="Next">Next</string>
+    <string name="login_tootlbar_title">Log in or sign up</string>
+    <string name="Your_phone_number">Your phone number</string>
+    <string name="Get_Help">Get Help</string>
+    <string name="Legal">Legal</string>
+    <string name="play_now">Play Now</string>
+    <string name="Review_Us">Review Us</string>
+    <string name="Daily_nChallenge">"Daily
+Challenge"</string>
+</resources>

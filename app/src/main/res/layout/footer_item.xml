@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/footer_items"
     android:layout_width="fill_parent"
     android:layout_height="40dp"
     android:paddingStart="8dp"

@@ -16,4 +16,6 @@
     <color name="white_alpha_50">#80ffffff</color>
     <color name="hq_purple_alpha_50">#806c6ed7</color>
     <color name="black">#ff000000</color>
+    <color name="eraser_blue">#ff2ea4ff</color>
+    <color name="hq_yellow">#fffed530</color>
 </resources>

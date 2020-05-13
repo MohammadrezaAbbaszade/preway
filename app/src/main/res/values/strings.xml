@@ -11,6 +11,6 @@
     <string name="Daily_nChallenge">"Daily
 Challenge"</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="HQ_Shop">HQ Shop</string>
+    <string name="Buy_More_Coins">Buy More Coins</string>
 </resources>

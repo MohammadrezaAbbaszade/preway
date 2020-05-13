@@ -3,6 +3,7 @@ package com.akaf.preway
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import kotlinx.android.synthetic.main.footer_item.*
 import kotlinx.android.synthetic.main.main_hq_footer_menu.*
 import kotlinx.android.synthetic.main.main_hq_layout.*
 import kotlinx.android.synthetic.main.main_hq_layout.view.*
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setListeners() {
         imageButton5.setOnClickListener {
+
             imageButton2.setBackgroundResource(R.drawable.ic_nav_discover_people)
             imageButton3.setBackgroundResource(R.drawable.ic_nav_store)
             imageButton4.setBackgroundResource(R.drawable.ic_nav_leaderboard)
@@ -38,7 +40,6 @@ class MainActivity : AppCompatActivity() {
                 fm.beginTransaction().replace(R.id.fragment_container, MainFragment.newInstance())
                     .commit()
             }
-
 
         }
 

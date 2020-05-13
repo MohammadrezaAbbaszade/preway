@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.View
 import kotlinx.android.synthetic.main.verification.*
 
 class LoginActivity : AppCompatActivity() {
@@ -31,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
 
 
         verification_submit_btn.setOnClickListener {
-            val intent= Intent(this,MainActivity::class.java)
+            val intent= Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 

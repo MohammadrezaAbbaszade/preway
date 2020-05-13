@@ -1,7 +1,13 @@
-package com.akaf.preway
+package com.akaf.preway.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.akaf.preway.framgments.DiscoverPeopleFragment
+import com.akaf.preway.R
+import com.akaf.preway.framgments.FourthFragment
+import com.akaf.preway.framgments.MainFragment
+import com.akaf.preway.framgments.StoreFragment
+import com.akaf.preway.framgments.ThirdFragment
 import kotlinx.android.synthetic.main.main_hq_footer_menu.*
 
 class MainActivity : AppCompatActivity() {
@@ -46,7 +52,10 @@ class MainActivity : AppCompatActivity() {
             imageButton5.setBackgroundResource(R.drawable.ic_nav_lobby)
             if (!DiscoverPeopleFragment.newInstance().isVisible) {
                 fm.popBackStack()
-                fm.beginTransaction().replace(R.id.fragment_container, DiscoverPeopleFragment.newInstance())
+                fm.beginTransaction().replace(
+                    R.id.fragment_container,
+                    DiscoverPeopleFragment.newInstance()
+                )
                     .commit()
             }
         }

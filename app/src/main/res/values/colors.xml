@@ -18,4 +18,7 @@
     <color name="black">#ff000000</color>
     <color name="eraser_blue">#ff2ea4ff</color>
     <color name="hq_yellow">#fffed530</color>
+    <color name="black_alpha_30">#4d000000</color>
+    <color name="black_alpha_20">#33000000</color>
+    <color name="light_gray">#ffbbbbbb</color>
 </resources>

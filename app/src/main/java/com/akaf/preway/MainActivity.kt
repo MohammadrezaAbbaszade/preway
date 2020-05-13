@@ -2,11 +2,7 @@ package com.akaf.preway
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import kotlinx.android.synthetic.main.footer_item.*
 import kotlinx.android.synthetic.main.main_hq_footer_menu.*
-import kotlinx.android.synthetic.main.main_hq_layout.*
-import kotlinx.android.synthetic.main.main_hq_layout.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -48,9 +44,9 @@ class MainActivity : AppCompatActivity() {
             imageButton3.setBackgroundResource(R.drawable.ic_nav_store)
             imageButton4.setBackgroundResource(R.drawable.ic_nav_leaderboard)
             imageButton5.setBackgroundResource(R.drawable.ic_nav_lobby)
-            if (!FirstFragment.newInstance().isVisible) {
+            if (!DiscoverPeopleFragment.newInstance().isVisible) {
                 fm.popBackStack()
-                fm.beginTransaction().replace(R.id.fragment_container, FirstFragment.newInstance())
+                fm.beginTransaction().replace(R.id.fragment_container, DiscoverPeopleFragment.newInstance())
                     .commit()
             }
         }
@@ -60,9 +56,9 @@ class MainActivity : AppCompatActivity() {
             imageButton3.setBackgroundResource(R.drawable.ic_nav_store_selected)
             imageButton4.setBackgroundResource(R.drawable.ic_nav_leaderboard)
             imageButton5.setBackgroundResource(R.drawable.ic_nav_lobby)
-            if (!SecondFragment.newInstance().isVisible) {
+            if (!StoreFragment.newInstance().isVisible) {
                 fm.popBackStack()
-                fm.beginTransaction().replace(R.id.fragment_container, SecondFragment.newInstance())
+                fm.beginTransaction().replace(R.id.fragment_container, StoreFragment.newInstance())
                     .commit()
             }
         }

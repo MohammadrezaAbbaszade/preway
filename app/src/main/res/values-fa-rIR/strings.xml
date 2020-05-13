@@ -14,4 +14,10 @@
 
     <string name="HQ_Shop">فروشگاه اچ کیو</string>
     <string name="Buy_More_Coins">خرید کوین اضافه</string>
+    <string name="Search_HQ_users">جستجوی نام افراد</string>
+    <string name="Cancel">انصراف</string>
+    <string name="Connect_Address_Book">Connect Address Book</string>
+    <string name="Connect_with_your_friends_on_HQ_See_their_status_during_games_and_more_secret_friend_features_coming">Connect with your friends on HQ. See their status during games and more secret friend features coming soon!</string>
+    <string name="Block_user">مسدود کردن کاربر</string>
+    <string name="Remove_friend">پاک کردن دوستتون</string>
 </resources>

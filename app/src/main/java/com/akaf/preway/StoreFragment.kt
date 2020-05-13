@@ -10,13 +10,13 @@ import android.view.ViewGroup
 /**
  * A simple [Fragment] subclass.
  */
-class FirstFragment : Fragment() {
+class StoreFragment : Fragment() {
 
 
     companion object {
-        fun newInstance(): FirstFragment {
+        fun newInstance(): StoreFragment {
             val args = Bundle()
-            val fragment = FirstFragment()
+            val fragment = StoreFragment()
             fragment.arguments = args
             return fragment
         }
@@ -26,8 +26,7 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view= inflater.inflate(R.layout.fragment_first, container, false)
-
+        val view= inflater.inflate(R.layout.fragment_store, container, false)
 
 
         return view

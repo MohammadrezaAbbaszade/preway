@@ -49,4 +49,6 @@ Challenge"</string>
     <string name="Terms_of_Use">Terms of Use</string>
     <string name="Privacy_Policy">Privacy Policy</string>
     <string name="and_b_Rules_b">and <b>Rules</b></string>
+    <string name="support_activity_title">Support</string>
+    <string name="zs_general_contact_us_button_label_accessibility">Contact us</string>
 </resources>

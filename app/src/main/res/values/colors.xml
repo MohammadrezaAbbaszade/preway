@@ -26,4 +26,5 @@
     <color name="words_orange">#fffeb03f</color>
     <color name="text_header_secondary">#ffa9a5c2</color>
     <color name="text_light_purple">#ffbebffb</color>
+    <color name="zs_color_transparent">#00000000</color>
 </resources>

@@ -1,11 +1,13 @@
 package com.akaf.preway
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.footer_item.view.*
 import kotlinx.android.synthetic.main.fragment_main.view.*
 
 /**
@@ -31,6 +33,11 @@ class MainFragment : Fragment() {
         val recyclerViewImages = ArrayList<Int>()
         recyclerViewImages.add(1)
         initRecyclerView(recyclerViewImages,view)
+
+        view.getHelpButton.setOnClickListener {
+            val intent= Intent(activity, HelpActivity::class.java)
+            startActivity(intent)
+        }
 
         return view
     }

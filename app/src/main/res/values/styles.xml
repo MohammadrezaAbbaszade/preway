@@ -6,12 +6,9 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryDark">@color/hq_blue</item>
-        <item name="android:actionOverflowButtonStyle">@style/MyThemeOverFlow</item>
     </style>
 
-    <style name="MyThemeOverFlow">
-        <item name="android:src">@drawable/ic_nav_leaderboard_selector</item>
-    </style>
+
     <style name="Caption1Secondary">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/text_body_secondary</item>
@@ -81,5 +78,13 @@
         <item name="android:layout_height">@dimen/grid_4</item>
         <item name="android:paddingStart">@dimen/grid_1_half</item>
         <item name="android:paddingEnd">@dimen/grid_1_half</item>
+    </style>
+
+    <style name="zs_contact_us_fab">
+        <item name="android:gravity">end|bottom|center</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_margin">@dimen/zs_fab_margin</item>
+        <item name="android:contentDescription">@string/zs_general_contact_us_button_label_accessibility</item>
+        <item name="srcCompat">@drawable/zs_create_ticket_fab</item>
     </style>
 </resources>

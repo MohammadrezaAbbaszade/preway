@@ -37,4 +37,8 @@
     <string name="Connect_your_account_to_discover_new_Instagram_users_and_get_new_followers_from_HQX">برای کشف کاربران جدید در اینستاگرام و دریافت دنبال کننده های جدید از HQX ، حساب خود را وصل کنید</string>
     <string name="Logout">خروج از حساب</string>
     <string name="Notifications">اعلانات</string>
+    <string name="Discover_People">پیدا کردن افراد</string>
+    <string name="Games">بازی ها</string>
+    <string name="Leaderboard">لیست قهرمانان</string>
+    <string name="Your_profile">پروفایل شما</string>
 </resources>

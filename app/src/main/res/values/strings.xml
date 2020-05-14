@@ -36,4 +36,8 @@ Challenge"</string>
     <string name="Connect_your_account_to_discover_new_Instagram_users_and_get_new_followers_from_HQX">Connect your account to discover new Instagram users and get new followers from HQX</string>
     <string name="Logout">Logout</string>
     <string name="Notifications">Notifications</string>
+    <string name="Discover_People">Discover People</string>
+    <string name="Games">Games</string>
+    <string name="Leaderboard">Leaderboard</string>
+    <string name="Your_profile">Your profile</string>
 </resources>

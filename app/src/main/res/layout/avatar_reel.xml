@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="@id/guideline_avatar_reel"
         app:srcCompat="@drawable/empty_profile" />
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@id/avatar"
+        android:id="@+id/avatar"
         android:layout_width="@dimen/grid_12"
         android:layout_height="@dimen/grid_12"
         app:layout_constraintBottom_toBottomOf="@id/guideline_avatar_reel"

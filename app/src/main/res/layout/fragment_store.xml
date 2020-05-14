@@ -9,6 +9,7 @@
        layout="@layout/store_header" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/store_fragment_recycler"
         android:layout_width="fill_parent"
         android:layout_height="0.0dip"
         android:layout_marginTop="@dimen/grid_2"

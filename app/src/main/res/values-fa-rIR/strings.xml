@@ -20,4 +20,9 @@
     <string name="Connect_with_your_friends_on_HQ_See_their_status_during_games_and_more_secret_friend_features_coming">Connect with your friends on HQ. See their status during games and more secret friend features coming soon!</string>
     <string name="Block_user">مسدود کردن کاربر</string>
     <string name="Remove_friend">پاک کردن دوستتون</string>
+    <string name="All_time">تمام زمان ها
+    <string name="This_week">این هفته</string></string>
+    <string name="You_need_more_Coins_to_buy_that_Power_Up">شما به کوین های بیشتری نیاز دارید</string>
+    <string name="Get_Coins">گرفتن کوین</string>
+    <string name="Not_now">الان نه</string>
 </resources>

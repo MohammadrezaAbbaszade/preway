@@ -6,17 +6,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_leaderboard.view.*
 
 /**
  * A simple [Fragment] subclass.
  */
-class ThirdFragment : Fragment() {
-
+class LeaderBoardFragment : Fragment() {
+    private lateinit var recyclerView: LeaderBoardAdapter
 
     companion object {
-        fun newInstance(): ThirdFragment {
+        fun newInstance(): LeaderBoardFragment {
             val args = Bundle()
-            val fragment = ThirdFragment()
+            val fragment = LeaderBoardFragment()
             fragment.arguments = args
             return fragment
         }
@@ -27,10 +28,17 @@ class ThirdFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view= inflater.inflate(R.layout.fragment_leaderboard, container, false)
-
+        val recyclerViewImages = ArrayList<Int>()
+        recyclerViewImages.add(1)
+        initRecyclerView(recyclerViewImages,view)
 
         return view
     }
+    private fun initRecyclerView(images: List<Int>,view:View) {
+        recyclerView =
+            LeaderBoardAdapter(context!!, images)
+        view.leaderboard_recycler.adapter = recyclerView
 
+    }
 
 }

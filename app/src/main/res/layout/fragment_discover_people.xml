@@ -67,7 +67,7 @@
                     android:paddingStart="@dimen/grid_2"
                     android:paddingEnd="@dimen/grid_2" />
                 <include android:id="@+id/empty_state_view_group"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     layout="@layout/discover_people_empty_state" />
             </RelativeLayout>
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

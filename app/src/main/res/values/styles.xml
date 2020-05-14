@@ -41,4 +41,19 @@
         <item name="android:drawableBottom">@color/mid_grey</item>
         <item name="android:fontFamily">@font/circularstdbook</item>
     </style>
+
+    <style name="TextViewBalanceRounded" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/text_view_rounded</item>
+        <item name="android:paddingTop">2.0dip</item>
+        <item name="android:paddingBottom">2.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/circularstdbook</item>
+        <item name="android:paddingStart">@dimen/grid_1</item>
+        <item name="android:paddingEnd">@dimen/grid_1</item>
+        <item name="android:backgroundTint">@color/light_grey</item>
+    </style>
 </resources>

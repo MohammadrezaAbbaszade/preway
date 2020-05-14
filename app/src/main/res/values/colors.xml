@@ -21,4 +21,8 @@
     <color name="black_alpha_30">#4d000000</color>
     <color name="black_alpha_20">#33000000</color>
     <color name="light_gray">#ffbbbbbb</color>
+    <color name="black_alpha_10">#1a000000</color>
+    <color name="black_alpha_5">#0d000000</color>
+    <color name="words_orange">#fffeb03f</color>
+    <color name="text_header_secondary">#ffa9a5c2</color>
 </resources>

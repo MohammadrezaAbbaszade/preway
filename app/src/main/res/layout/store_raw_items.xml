@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/announcementCardView"
+
+    android:layout_width="fill_parent"
+    android:layout_height="240dp"
+    android:layout_marginTop="@dimen/grid_1"
+    android:layout_marginBottom="@dimen/grid_1"
+    android:layout_marginStart="@dimen/grid_2"
+    android:layout_marginEnd="@dimen/grid_2"
+    android:elevation="0.5dip"
+    app:cardCornerRadius="12.0dip">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+
+        android:layout_height="fill_parent">
+
+        <TextView
+           android:layout_weight="1"
+            android:id="@+id/store_raw_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extra Lives"
+            android:layout_gravity="center"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        />
+        <TextView
+         android:layout_weight="1"
+            android:id="@+id/store_raw_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This the sample Description"
+            android:textSize="14sp"
+           android:layout_gravity="center"/>
+
+        <FrameLayout
+
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:layout_gravity="center|top">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_round_shape"
+                    android:src="@drawable/ic_superspin_small"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:text="2000"
+                    android:textAlignment="center"
+                    android:background="@drawable/butto_round_shape_2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="left|top"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_round_shape"
+                    android:src="@drawable/ic_superspin_small"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:text="2000"
+                    android:textAlignment="center"
+                    android:background="@drawable/butto_round_shape_2" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="12dp"
+                android:layout_gravity="right|top"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_round_shape"
+                    android:src="@drawable/ic_superspin_small"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:text="2000"
+                    android:textAlignment="center"
+                    android:background="@drawable/butto_round_shape_2" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

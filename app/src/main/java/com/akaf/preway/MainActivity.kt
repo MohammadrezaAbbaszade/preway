@@ -1,13 +1,7 @@
-package com.akaf.preway.activities
+package com.akaf.preway
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.akaf.preway.framgments.DiscoverPeopleFragment
-import com.akaf.preway.R
-import com.akaf.preway.framgments.FourthFragment
-import com.akaf.preway.framgments.MainFragment
-import com.akaf.preway.framgments.StoreFragment
-import com.akaf.preway.framgments.ThirdFragment
 import kotlinx.android.synthetic.main.main_hq_footer_menu.*
 
 class MainActivity : AppCompatActivity() {
@@ -77,9 +71,9 @@ class MainActivity : AppCompatActivity() {
             imageButton3.setBackgroundResource(R.drawable.ic_nav_store)
             imageButton4.setBackgroundResource(R.drawable.ic_nav_leaderboard_selected)
             imageButton5.setBackgroundResource(R.drawable.ic_nav_lobby)
-            if (!ThirdFragment.newInstance().isVisible) {
+            if (!LeaderBoardFragment.newInstance().isVisible) {
                 fm.popBackStack()
-                fm.beginTransaction().replace(R.id.fragment_container, ThirdFragment.newInstance())
+                fm.beginTransaction().replace(R.id.fragment_container, LeaderBoardFragment.newInstance())
                     .commit()
             }
         }

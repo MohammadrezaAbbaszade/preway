@@ -25,4 +25,16 @@
     <string name="You_need_more_Coins_to_buy_that_Power_Up">شما به کوین های بیشتری نیاز دارید</string>
     <string name="Get_Coins">گرفتن کوین</string>
     <string name="Not_now">الان نه</string>
+    <string name="Referral_Codes">کد های معرف</string>
+    <string name="Earn_Power_Ups_when_you_refer_friends">هنگام مراجعه به دوستان ، یو پی اس قدرت کسب کنید</string>
+    <string name="Enable_Notifications">فعال کردن اعلانات</string>
+    <string name="Get_notified_when_the_shows_are_live">وقتی نمایش ها زنده هستند مطلع شوید:</string>
+    <string name="Discoverable_nearby">در همین نزدیکی قابل تشخیص باشد</string>
+    <string name="Enable_this_setting_to_be_discoverable_to_people_playing_HQ_near_you_It_s_fun">"فعال کردن این تنظیم باعث پیدا کردن افراد نزدک شما میشود."</string>
+    <string name="Refresh_contacts">تازه سازی مخاطبین</string>
+    <string name="Enable_this_to_automatically_keep_your_contacts_on_HQ_up_to_date">با فعال سازی این به صورت خودکار مخطبین شما بروزرسانی میشوند.</string>
+    <string name="Connect_Instagram">وصل شدن به اینستاگرام</string>
+    <string name="Connect_your_account_to_discover_new_Instagram_users_and_get_new_followers_from_HQX">برای کشف کاربران جدید در اینستاگرام و دریافت دنبال کننده های جدید از HQX ، حساب خود را وصل کنید</string>
+    <string name="Logout">خروج از حساب</string>
+    <string name="Notifications">اعلانات</string>
 </resources>

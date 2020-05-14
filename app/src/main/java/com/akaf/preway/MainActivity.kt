@@ -83,9 +83,9 @@ class MainActivity : AppCompatActivity() {
             imageButton3.setBackgroundResource(R.drawable.ic_nav_store)
             imageButton4.setBackgroundResource(R.drawable.ic_nav_leaderboard)
             imageButton5.setBackgroundResource(R.drawable.ic_nav_lobby)
-            if (!FourthFragment.newInstance().isVisible) {
+            if (!SettingFragment.newInstance().isVisible) {
                 fm.popBackStack()
-                fm.beginTransaction().replace(R.id.fragment_container, FourthFragment.newInstance())
+                fm.beginTransaction().replace(R.id.fragment_container, SettingFragment.newInstance())
                     .commit()
             }
         }

@@ -10,13 +10,13 @@ import android.view.ViewGroup
 /**
  * A simple [Fragment] subclass.
  */
-class FourthFragment : Fragment() {
+class SettingFragment : Fragment() {
 
 
     companion object {
-        fun newInstance(): FourthFragment {
+        fun newInstance(): SettingFragment {
             val args = Bundle()
-            val fragment = FourthFragment()
+            val fragment = SettingFragment()
             fragment.arguments = args
             return fragment
         }
@@ -26,7 +26,7 @@ class FourthFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view= inflater.inflate(R.layout.fragment_fourth, container, false)
+        val view= inflater.inflate(R.layout.fragment_setting, container, false)
 
 
         return view

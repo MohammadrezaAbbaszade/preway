@@ -56,4 +56,25 @@
         <item name="android:paddingEnd">@dimen/grid_1</item>
         <item name="android:backgroundTint">@color/light_grey</item>
     </style>
+
+    <style name="Headline">
+        <item name="android:textSize">@dimen/headline</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/circularstdbold</item>
+    </style>
+
+    <style name="BodyPrimary">
+        <item name="android:textSize">@dimen/body</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:lineSpacingExtra">1.7999878dip</item>
+        <item name="android:fontFamily">@font/circularstdmedium</item>
+    </style>
+
+    <style name="ButtonRoundSmall" parent="@style/ButtonRound">
+        <item name="android:textSize">@dimen/button_small_text_size</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/grid_4</item>
+        <item name="android:paddingStart">@dimen/grid_1_half</item>
+        <item name="android:paddingEnd">@dimen/grid_1_half</item>
+    </style>
 </resources>

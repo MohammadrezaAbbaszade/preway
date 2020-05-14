@@ -40,4 +40,13 @@ Challenge"</string>
     <string name="Games">Games</string>
     <string name="Leaderboard">Leaderboard</string>
     <string name="Your_profile">Your profile</string>
+    <string name="Enter_Verification_Code">Enter Verification Code</string>
+    <string name="Resend_code">Resend code</string>
+    <string name="Call_me">Call me</string>
+    <string name="Live_Game_Shows">Live Game Shows</string>
+    <string name="Get_Started">Get Started</string>
+    <string name="By_signing_up_you_agree_to_the">By signing up you agree to the</string>
+    <string name="Terms_of_Use">Terms of Use</string>
+    <string name="Privacy_Policy">Privacy Policy</string>
+    <string name="and_b_Rules_b">and <b>Rules</b></string>
 </resources>

@@ -41,4 +41,13 @@
     <string name="Games">بازی ها</string>
     <string name="Leaderboard">لیست قهرمانان</string>
     <string name="Your_profile">پروفایل شما</string>
+    <string name="Enter_Verification_Code">کد تاییدیه را وارد کنید</string>
+    <string name="Resend_code">ارسال مجدد</string>
+    <string name="Call_me">برقراری تماس</string>
+    <string name="Live_Game_Shows">نمایش بازی به صورت زنده</string>
+    <string name="Get_Started">شروع</string>
+    <string name="By_signing_up_you_agree_to_the">By signing up you agree to the</string>
+    <string name="Terms_of_Use">Terms of Use</string>
+    <string name="Privacy_Policy">Privacy Policy</string>
+    <string name="and_b_Rules_b">and <b>Rules</b></string>
 </resources>

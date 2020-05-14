@@ -3,36 +3,22 @@ package com.akaf.preway
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import kotlinx.android.synthetic.main.verification.*
+import android.view.animation.AnimationUtils
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.verification)
+        setContentView(R.layout.activity_login)
 
-        verification_edit_text.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
+        val aniRotate = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_anim)
+        loginBackgroundDots.startAnimation(aniRotate)
+        loginBackgroundShapes.startAnimation(aniRotate)
+        getStartedButton.setOnClickListener {
 
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                verification_submit_btn.isClickable=true
-            }
-
-        })
-
-
-        verification_submit_btn.setOnClickListener {
-            val intent= Intent(this, MainActivity::class.java)
+            val intent= Intent(this, FirstVerificationActivity::class.java)
             startActivity(intent)
         }
-
     }
 }

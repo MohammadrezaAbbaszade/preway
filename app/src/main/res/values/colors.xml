@@ -25,4 +25,5 @@
     <color name="black_alpha_5">#0d000000</color>
     <color name="words_orange">#fffeb03f</color>
     <color name="text_header_secondary">#ffa9a5c2</color>
+    <color name="text_light_purple">#ffbebffb</color>
 </resources>

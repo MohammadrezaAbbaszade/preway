@@ -51,4 +51,11 @@ Challenge"</string>
     <string name="and_b_Rules_b">and <b>Rules</b></string>
     <string name="support_activity_title">Support</string>
     <string name="zs_general_contact_us_button_label_accessibility">Contact us</string>
+    <string name="Rules">Rules</string>
+    <string name="Tell_us_about_your_n_experience">"Tell us about your
+ experience"</string>
+
+    <string name="Your_detailed_feedback_helps_us_make_HQ_Trivia_better">Your detailed feedback helps us make HQ Trivia better.</string>
+    <string name="Report_issue">Report issue</string>
+    <string name="Rate_us">Rate us</string>
 </resources>

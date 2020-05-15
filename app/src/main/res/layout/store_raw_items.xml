@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
            >
             <LinearLayout
-
+android:id="@+id/store_items_second"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -69,6 +69,7 @@
                     android:background="@drawable/butto_round_shape_2" />
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/store_items_first"
                 android:layout_marginLeft="12dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -93,7 +94,7 @@
             </LinearLayout>
 
             <LinearLayout
-
+                android:id="@+id/store_items_third"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"

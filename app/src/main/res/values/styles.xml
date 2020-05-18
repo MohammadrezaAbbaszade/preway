@@ -87,4 +87,10 @@
         <item name="android:contentDescription">@string/zs_general_contact_us_button_label_accessibility</item>
         <item name="srcCompat">@drawable/zs_create_ticket_fab</item>
     </style>
+
+    <style name="ToolbarTitle">
+        <item name="android:textSize">22.0sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/circularstdmedium</item>
+    </style>
 </resources>

@@ -9,7 +9,7 @@
     <string name="play_now">Play Now</string>
     <string name="Review_Us">Review Us</string>
     <string name="Daily_nChallenge">"Daily
-Challenge"</string>
+        Challenge"</string>
 
     <string name="HQ_Shop">HQ Shop</string>
     <string name="Buy_More_Coins">Buy More Coins</string>
@@ -58,4 +58,42 @@ Challenge"</string>
     <string name="Your_detailed_feedback_helps_us_make_HQ_Trivia_better">Your detailed feedback helps us make HQ Trivia better.</string>
     <string name="Report_issue">Report issue</string>
     <string name="Rate_us">Rate us</string>
+    <string name="Time_s_up">"Time's up!"</string>
+    <string name="Question">Question</string>
+    <string name="Thanks_for_being_patient_n_Your_game_will_resume_shortly">"Thanks for being patient!
+ Your game will resume shortly."</string>
+    <string name="Reconnecting">Reconnecting…</string>
+    <string name="Answer_trivia_questions_to_win_rewards">Answer trivia questions to win rewards!</string>
+    <string name="Continue">Continue</string>
+
+
+    <string name="one">What is the Capital of Iran?</string>
+    <string name="Two">What the answer of 2*3?</string>
+    <string name="Three">what is the Heart of Body?</string>
+    <string name="Four">What the name of the Tallest
+        Mountain in The world?</string>
+
+    <string name="Five">What is the co-founder of Apple Inc?</string>
+    <string name="Six">What is the co-founder of
+        Microsoft Inc?</string>
+    <string name="Seven">What is the co-founder of Apple Inc?</string>
+    <string name="Eight">What is the co-founder of Apple Inc?</string>
+    <string name="Nine">What is the co-founder of Apple Inc?</string>
+    <string name="Ten">What is the co-founder of Apple Inc?</string>
+    <string name="Twelve">What is the co-founder of Apple Inc?</string>
+    <string name="Eleven">What is the co-founder of Apple Inc?</string>
+
+
+    <string name="AoneOne">Tehran</string>
+    <string name="AoneTwo">Barcelona</string>
+    <string name="AoneThree">Tokiyo</string>
+
+    <string name="ATwoOne">8</string>
+    <string name="ATwoTwo">5</string>
+    <string name="ATwoThree">6</string>
+
+    <string name="AThreeOne">sample1</string>
+    <string name="AThreeTwo">sample2</string>
+    <string name="AThreeThree">sample3</string>
+
 </resources>

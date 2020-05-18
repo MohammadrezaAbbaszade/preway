@@ -13,6 +13,7 @@ import android.widget.AdapterView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.footer_item.view.*
 import kotlinx.android.synthetic.main.fragment_main.view.*
+import kotlinx.android.synthetic.main.hq_layout.view.*
 
 /**
  * A simple [Fragment] subclass.
@@ -56,6 +57,13 @@ class MainFragment : Fragment() {
         view.reviewUsButton.setOnClickListener {
 
             showDialog(context!!)
+        }
+
+        view.challengeButton.setOnClickListener {
+
+            val intent = Intent(activity, StartGameActivity::class.java)
+            startActivity(intent)
+
         }
         return view
     }

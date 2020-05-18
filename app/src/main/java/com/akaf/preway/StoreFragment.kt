@@ -1,6 +1,7 @@
 package com.akaf.preway
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -34,7 +35,10 @@ class StoreFragment : Fragment() {
         recyclerViewImages.add(1)
         initRecyclerView(recyclerViewImages,view)
 
-        return view
+        view.webStoreButton.setOnClickListener {
+            val intent = Intent(activity, WebStoreActivity::class.java)
+            startActivity(intent)
+        }
 
         return view
     }

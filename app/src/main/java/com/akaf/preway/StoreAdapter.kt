@@ -3,6 +3,8 @@ package com.akaf.preway
 
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,55 +35,42 @@ class StoreAdapter(val context: Context, var productList: List<Int>) :
     class ViewHolder(val view: View, val context: Context) : RecyclerView.ViewHolder(view) {
 
 
+        fun bind(image: Int) {
 
-        fun bind(image:Int){
+            with(view) {
 
-            setItemListener()
-
-            with(view){
-
-
-
-            }
-        }
-
-
-        fun setItemListener()
-        {
-            view.store_items_first.setOnClickListener{
-                showDialog(context)
-
-            }
-
-            view.store_items_second.setOnClickListener{
-                showDialog(context)
-
-            }
-
-            view.store_items_third.setOnClickListener{
-                showDialog(context)
-
-            }
-        }
-
-
-        fun showDialog(context:Context){
-            val alertDialog = AlertDialog.Builder(context)
-
-            alertDialog.setView(R.layout.store_need_coin)
-            alertDialog.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
-                override fun onNothingSelected(parent: AdapterView<*>?) {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                store_items_first.setOnClickListener {
+                    showDialog(context)
                 }
 
-                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                store_items_first.setOnClickListener {
+                    showDialog(context)
                 }
 
-
-            })
-            alertDialog.show()
+                store_items_first.setOnClickListener {
+                    showDialog(context)
+                }
+            }
         }
+fun showDialog(context: Context){
+    val alertDialog = AlertDialog.Builder(context)
+
+    alertDialog.setView(R.layout.fragment_need_coin_dialog)
+    alertDialog.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
+        override fun onNothingSelected(parent: AdapterView<*>?) {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
+
+        override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
+
+
+    })
+    alertDialog.show()
+
+}
+
 
 
     }

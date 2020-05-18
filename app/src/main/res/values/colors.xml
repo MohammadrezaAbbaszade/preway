@@ -28,4 +28,6 @@
     <color name="text_light_purple">#ffbebffb</color>
     <color name="zs_color_transparent">#00000000</color>
     <color name="hq_turquoise">#ff6cd7d6</color>
+    <color name="text_dark_purple">#ff6b6ed8</color>
+    <color name="words_countdown_progress_bar">#fffad554</color>
 </resources>

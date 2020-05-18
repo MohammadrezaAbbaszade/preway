@@ -11,6 +11,7 @@ import android.view.animation.Animation
 import android.view.animation.Animation.RELATIVE_TO_SELF
 import android.view.animation.AnimationUtils
 import android.view.animation.RotateAnimation
+import android.widget.Button
 import kotlinx.android.synthetic.main.activity_start_game.*
 import kotlinx.android.synthetic.main.offair_question_counter_view.*
 
@@ -57,8 +58,19 @@ class StartGameActivity : AppCompatActivity() {
             startQuestionCounter()
 
         }
+        first_answer.setOnClickListener {
 
+            answerClicked(first_answer)
+        }
+        second_answer.setOnClickListener {
 
+            answerClicked(second_answer)
+        }
+
+        third_answer.setOnClickListener {
+
+            answerClicked(third_answer)
+        }
 
         Handler().postDelayed(object : Runnable {
             override fun run() {
@@ -78,10 +90,10 @@ class StartGameActivity : AppCompatActivity() {
     private fun startQuestionCounter() {
         Log.e("seeTheStarts", "startQuestionCounter")
         var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
-
+        offairQuestionCounterView.startAnimation(getAnimation(R.anim.fade_in))
         offairQuestionCounterView.visibility = View.VISIBLE
 
-        offairQuestionCounterValueView.text = "of 12"
+        offairQuestionCounterValueView.text = "${questionCounter+1}"+" " + "of 12"
 
     }
 
@@ -97,20 +109,19 @@ class StartGameActivity : AppCompatActivity() {
     }
 
     private fun setQuestionsText() {
-        Log.e("seeTheStarts", "setQuestionsText")
+
+        offairQuestionCounterView.startAnimation(getAnimation(R.anim.fade_out))
         offairQuestionCounterView.visibility = View.GONE
         offairQuestionView.visibility = View.VISIBLE
         offairCountdownContainer.visibility = View.VISIBLE
-        offairQuestionTextView.visibility = View.VISIBLE
+//        offairQuestionTextView.visibility = View.VISIBLE
 
         var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
-        if (questionCounter <= 11) {
 
+            Log.e("seeTheStarts", questionCounter.toString())
             offairQuestionTextView.text = question.questions.get(questionCounter)
-            SharePreferenceData.setQuestionCounter(this, questionCounter + 1)
-        } else {
-            SharePreferenceData.setQuestionCounter(this, 0)
-        }
+            SharePreferenceData.setQuestionCounter(this, (++questionCounter)%12)
+
     }
 
     private fun startUpdateProgressBar() {
@@ -151,13 +162,14 @@ class StartGameActivity : AppCompatActivity() {
         Log.e("seeTheStarts", "timesUp")
 
         offairCountdownContainer.visibility = View.INVISIBLE
-        offairQuestionTextView.visibility = View.INVISIBLE
+//        offairQuestionTextView.visibility = View.INVISIBLE
         offairTimesUpPillView.visibility = View.VISIBLE
 
         Handler().postDelayed(object : Runnable {
             override fun run() {
 
-                offairTimesUpPillView.startAnimation(getAnimation(R.anim.fade_out))
+                offairQuestionView.startAnimation(getAnimation(R.anim.fade_out))
+                offairQuestionView.visibility = View.INVISIBLE
                 offairTimesUpPillView.visibility = View.INVISIBLE
                 startQuestionCounter()
             }
@@ -167,8 +179,7 @@ class StartGameActivity : AppCompatActivity() {
 
         Handler().postDelayed(object : Runnable {
             override fun run() {
-
-
+resetAnswers()
                 setQuestionsText()
 
                 startUpdateProgressBar()
@@ -178,8 +189,11 @@ class StartGameActivity : AppCompatActivity() {
 
     }
 
-    private fun checkAnswer() {
+    private fun checkAnswer(answer: String): Boolean {
+        var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
+        var correctAnswer = question.answers.get(questionCounter)
 
+        return answer.equals(correctAnswer)
 
     }
 
@@ -188,4 +202,82 @@ class StartGameActivity : AppCompatActivity() {
         return animation
     }
 
+
+    public fun answerClicked(view: Button) {
+        timer.cancel()
+        time=1
+        offairCountdownContainer.visibility = View.INVISIBLE
+        var drawable = resources.getDrawable(R.drawable.round_correct_answer)
+        if (checkAnswer(view.text.toString())) {
+            view.background = drawable
+            first_answer.isEnabled = false
+            second_answer.isEnabled = false
+            third_answer.isEnabled = false
+            resetTheviewAfterAnswer()
+
+        } else {
+            offairResultPillView.visibility = View.VISIBLE
+
+            resetTheviewAfterAnswer()
+
+            drawable = resources.getDrawable(R.drawable.incorrect_answer)
+            view.background = drawable
+            first_answer.isEnabled = false
+            second_answer.isEnabled = false
+            third_answer.isEnabled = false
+        }
+    }
+
+    private fun resetTheviewAfterAnswer() {
+        Handler().postDelayed(object : Runnable {
+            override fun run() {
+
+                offairQuestionView.startAnimation(getAnimation(R.anim.fade_out))
+                offairQuestionView.visibility = View.INVISIBLE
+                offairResultPillView.visibility = View.INVISIBLE
+                startQuestionCounter()
+            }
+
+        }, 2000)
+
+
+        Handler().postDelayed(object : Runnable {
+            override fun run() {
+    //                    offairResultPillView.startAnimation(getAnimation(R.anim.fade_out))
+                offairResultPillView.visibility = View.INVISIBLE
+
+                resetAnswers()
+
+                setQuestionsText()
+
+                startUpdateProgressBar()
+            }
+
+        }, 6000)
+    }
+
+    fun resetAnswers() {
+
+
+        var drawable = resources.getDrawable(R.drawable.answer_round)
+        first_answer.background = drawable
+        second_answer.background = drawable
+        third_answer.background = drawable
+
+        first_answer.isEnabled = true
+        second_answer.isEnabled = true
+        third_answer.isEnabled = true
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+       if(timerState.equals(TimerState.Running)) {
+           timer.cancel()
+       }
+
+        var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
+
+        Log.e("seeTheStarts", questionCounter.toString())
+        SharePreferenceData.setQuestionCounter(this, (questionCounter-1+12)%12)
+    }
 }

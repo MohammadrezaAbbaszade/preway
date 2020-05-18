@@ -43,11 +43,11 @@ class StoreAdapter(val context: Context, var productList: List<Int>) :
                     showDialog(context)
                 }
 
-                store_items_first.setOnClickListener {
+                store_items_second.setOnClickListener {
                     showDialog(context)
                 }
 
-                store_items_first.setOnClickListener {
+                store_items_third.setOnClickListener {
                     showDialog(context)
                 }
             }

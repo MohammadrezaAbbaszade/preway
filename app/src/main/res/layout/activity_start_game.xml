@@ -55,8 +55,7 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:progressDrawable="@drawable/progress_circle_yellow_purple"
-                     />
+                    android:progressDrawable="@drawable/progress_circle_yellow_purple" />
 
 
             </FrameLayout>
@@ -139,11 +138,49 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/offairQuestionCenterGuideline"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0">
+
+                <Button android:textSize="@dimen/phone_verification_text"
+                    android:textColor="@color/white"
+                    android:id="@+id/first_answer"
+                    android:background="@drawable/answer_round"
+                    android:layout_width="fill_parent"
+                    android:text="@string/AThreeOne"
+                    android:layout_height="@dimen/grid_7"
+                    android:layout_marginTop="@dimen/grid_2"
+                  android:paddingStart="@dimen/grid_3"
+                    android:paddingEnd="@dimen/grid_3"
+                    android:layout_marginStart="@dimen/grid_3"
+                    android:layout_marginEnd="@dimen/grid_3" />
+
+                <Button android:textSize="@dimen/phone_verification_text"
+                    android:textColor="@color/white"
+                    android:id="@+id/second_answer"
+                    android:background="@drawable/answer_round"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/grid_7"
+                    android:text="@string/AThreeTwo"
+                    android:layout_marginTop="@dimen/grid_2"
+                    android:paddingStart="@dimen/grid_3"
+                    android:paddingEnd="@dimen/grid_3"
+                    android:layout_marginStart="@dimen/grid_3"
+                    android:layout_marginEnd="@dimen/grid_3" />
+
+                <Button android:textSize="@dimen/phone_verification_text"
+                    android:textColor="@color/white"
+                    android:id="@+id/third_answer"
+                    android:background="@drawable/answer_round"
+                    android:layout_width="fill_parent"
+                    android:text="@string/AThreeThree"
+                    android:layout_height="@dimen/grid_7"
+                    android:layout_marginTop="@dimen/grid_2"
+                    android:paddingStart="@dimen/grid_3"
+                    android:paddingEnd="@dimen/grid_3"
+                    android:layout_marginStart="@dimen/grid_3"
+                    android:layout_marginEnd="@dimen/grid_3" />
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
         <include layout="@layout/offair_question_counter_view" />

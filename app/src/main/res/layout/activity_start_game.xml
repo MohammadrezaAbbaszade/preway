@@ -73,6 +73,19 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/offairTrueResultPillView"
+                android:layout_width="@dimen/grid_7"
+                android:layout_height="@dimen/grid_7"
+                android:layout_marginTop="@dimen/grid_4"
+                android:background="@drawable/white_circle"
+                android:backgroundTint="@color/correct_green"
+                android:padding="@dimen/grid_2"
+                android:src="@drawable/ic_pill_correct"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/offairTimesUpPillView"

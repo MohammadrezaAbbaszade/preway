@@ -17,6 +17,8 @@ import kotlinx.android.synthetic.main.offair_question_counter_view.*
 
 
 import kotlinx.android.synthetic.main.offair_start_view.*
+import kotlinx.android.synthetic.main.offair_stats_animated_stars.*
+import kotlinx.android.synthetic.main.offair_stats_view.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
@@ -93,7 +95,7 @@ class StartGameActivity : AppCompatActivity() {
         offairQuestionCounterView.startAnimation(getAnimation(R.anim.fade_in))
         offairQuestionCounterView.visibility = View.VISIBLE
 
-        offairQuestionCounterValueView.text = "${questionCounter+1}"+" " + "of 12"
+        offairQuestionCounterValueView.text = "${questionCounter + 1}" + " " + "of 12"
 
     }
 
@@ -118,9 +120,9 @@ class StartGameActivity : AppCompatActivity() {
 
         var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
 
-            Log.e("seeTheStarts", questionCounter.toString())
-            offairQuestionTextView.text = question.questions.get(questionCounter)
-            SharePreferenceData.setQuestionCounter(this, (++questionCounter)%12)
+        Log.e("seeTheStarts", questionCounter.toString())
+        offairQuestionTextView.text = question.questions.get(questionCounter)
+        SharePreferenceData.setQuestionCounter(this, (++questionCounter) % 12)
 
     }
 
@@ -165,6 +167,10 @@ class StartGameActivity : AppCompatActivity() {
 //        offairQuestionTextView.visibility = View.INVISIBLE
         offairTimesUpPillView.visibility = View.VISIBLE
 
+        first_answer.isEnabled = false
+        second_answer.isEnabled = false
+        third_answer.isEnabled = false
+
         Handler().postDelayed(object : Runnable {
             override fun run() {
 
@@ -179,7 +185,7 @@ class StartGameActivity : AppCompatActivity() {
 
         Handler().postDelayed(object : Runnable {
             override fun run() {
-resetAnswers()
+                resetAnswers()
                 setQuestionsText()
 
                 startUpdateProgressBar()
@@ -197,6 +203,14 @@ resetAnswers()
 
     }
 
+    private fun getAnswer(): String {
+        var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
+        var correctAnswer = question.answers.get(questionCounter)
+
+        return correctAnswer
+
+    }
+
     private fun getAnimation(aninationId: Int): Animation {
         val animation = AnimationUtils.loadAnimation(getApplicationContext(), aninationId)
         return animation
@@ -205,21 +219,34 @@ resetAnswers()
 
     public fun answerClicked(view: Button) {
         timer.cancel()
-        time=1
+        time = 1
         offairCountdownContainer.visibility = View.INVISIBLE
         var drawable = resources.getDrawable(R.drawable.round_correct_answer)
         if (checkAnswer(view.text.toString())) {
+            offairTrueResultPillView.visibility = View.VISIBLE
             view.background = drawable
+            startAndVisibleStarts()
             first_answer.isEnabled = false
             second_answer.isEnabled = false
             third_answer.isEnabled = false
-            resetTheviewAfterAnswer()
+
 
         } else {
             offairResultPillView.visibility = View.VISIBLE
 
             resetTheviewAfterAnswer()
+            when (getAnswer()) {
+                first_answer.text -> {
+                    first_answer.background = drawable
+                }
+                second_answer.text -> {
+                    second_answer.background = drawable
+                }
+                third_answer.text -> {
+                    third_answer.background = drawable
+                }
 
+            }
             drawable = resources.getDrawable(R.drawable.incorrect_answer)
             view.background = drawable
             first_answer.isEnabled = false
@@ -229,13 +256,17 @@ resetAnswers()
     }
 
     private fun resetTheviewAfterAnswer() {
+        Log.e("resetTheviewAfterAnswer", "yes")
+
         Handler().postDelayed(object : Runnable {
             override fun run() {
 
                 offairQuestionView.startAnimation(getAnimation(R.anim.fade_out))
                 offairQuestionView.visibility = View.INVISIBLE
                 offairResultPillView.visibility = View.INVISIBLE
+                offairTrueResultPillView.visibility = View.INVISIBLE
                 startQuestionCounter()
+                resetStarsPosition()
             }
 
         }, 2000)
@@ -243,8 +274,10 @@ resetAnswers()
 
         Handler().postDelayed(object : Runnable {
             override fun run() {
-    //                    offairResultPillView.startAnimation(getAnimation(R.anim.fade_out))
+                //                    offairResultPillView.startAnimation(getAnimation(R.anim.fade_out))
                 offairResultPillView.visibility = View.INVISIBLE
+
+
 
                 resetAnswers()
 
@@ -271,13 +304,99 @@ resetAnswers()
 
     override fun onDestroy() {
         super.onDestroy()
-       if(timerState.equals(TimerState.Running)) {
-           timer.cancel()
-       }
+        if (timerState.equals(TimerState.Running)) {
+            timer.cancel()
+        }
 
         var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
 
         Log.e("seeTheStarts", questionCounter.toString())
-        SharePreferenceData.setQuestionCounter(this, (questionCounter-1+12)%12)
+        SharePreferenceData.setQuestionCounter(this, (questionCounter - 1 + 12) % 12)
+    }
+
+    private fun startAndVisibleStarts() {
+        var animatedStar1X = animatedStar1.x
+        var animatedStar1Y = animatedStar1.y
+        var animatedStar2X = animatedStar2.x
+        var animatedStar2Y = animatedStar2.y
+        var animatedStar3X = animatedStar3.x
+        var animatedStar3Y = animatedStar3.y
+        var animatedStar4X = animatedStar4.x
+        var animatedStar4Y = animatedStar4.y
+        var animatedStar5X = animatedStar5.x
+        var animatedStar5Y = animatedStar5.y
+
+        animatedStar1.visibility = View.VISIBLE
+        animatedStar2.visibility = View.VISIBLE
+        animatedStar3.visibility = View.VISIBLE
+        animatedStar4.visibility = View.VISIBLE
+        animatedStar5.visibility = View.VISIBLE
+
+        Handler().postDelayed(object : Runnable {
+            override fun run() {
+                animatedStar1.animate()
+                    .x(starView.x)
+                    .y(starView.y)
+                    .setDuration(500)
+                    .start()
+
+                animatedStar2.animate()
+                    .x(starView.x)
+                    .y(starView.y)
+                    .setDuration(600)
+                    .start()
+
+
+                animatedStar3.animate()
+                    .x(starView.x)
+                    .y(starView.y)
+                    .setDuration(700)
+                    .start()
+
+                animatedStar4.animate()
+                    .x(starView.x)
+                    .y(starView.y)
+                    .setDuration(800)
+                    .start()
+
+                animatedStar5.animate()
+                    .x(starView.x)
+                    .y(starView.y)
+                    .setDuration(900)
+                    .start()
+
+
+            }
+
+        }, 1000)
+
+
+        resetTheviewAfterAnswer()
+        Handler().postDelayed(object : Runnable {
+            override fun run() {
+
+                animatedStar1.x=animatedStar1X
+                animatedStar1.y=animatedStar1Y
+                animatedStar2.x=animatedStar2X
+                animatedStar2.y=animatedStar2Y
+                animatedStar3.x=animatedStar3X
+                animatedStar3.y=animatedStar3Y
+                animatedStar4.x=animatedStar4X
+                animatedStar4.y=animatedStar4Y
+                animatedStar5.x=animatedStar5X
+                animatedStar5.y=animatedStar5Y
+            }
+
+        }, 4000)
+
+    }
+
+    private fun resetStarsPosition()
+    {
+               animatedStar1.visibility=View.INVISIBLE
+        animatedStar2.visibility=View.INVISIBLE
+        animatedStar3.visibility=View.INVISIBLE
+        animatedStar4.visibility=View.INVISIBLE
+        animatedStar5.visibility=View.INVISIBLE
     }
 }

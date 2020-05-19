@@ -1,10 +1,12 @@
 package com.akaf.preway
 
+import android.content.res.AssetFileDescriptor
+import android.media.AudioAttributes
+import android.media.AudioManager
+import android.media.MediaPlayer
+import android.net.Uri
+import android.os.*
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.os.CountDownTimer
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.view.animation.Animation
@@ -22,6 +24,7 @@ import kotlinx.android.synthetic.main.offair_stats_view.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
+import java.io.IOException
 
 class StartGameActivity : AppCompatActivity() {
     val question by lazy {
@@ -32,6 +35,7 @@ class StartGameActivity : AppCompatActivity() {
         Stopped, Paused, Running
     }
 
+    lateinit var beatBox: BeatBox
     lateinit var timer: CountDownTimer
 
     private var timerState = TimerState.Stopped
@@ -39,11 +43,15 @@ class StartGameActivity : AppCompatActivity() {
 
     private var time = 1
 
+    lateinit var afd: AssetFileDescriptor
+
+    lateinit var mediaPlayer: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start_game)
 
+        play("offair_music.mp3",true)
 
 
         if (!SharePreferenceData.getPlayerResult(this)!!) {
@@ -223,6 +231,7 @@ class StartGameActivity : AppCompatActivity() {
         offairCountdownContainer.visibility = View.INVISIBLE
         var drawable = resources.getDrawable(R.drawable.round_correct_answer)
         if (checkAnswer(view.text.toString())) {
+
             offairTrueResultPillView.visibility = View.VISIBLE
             view.background = drawable
             startAndVisibleStarts()
@@ -312,6 +321,9 @@ class StartGameActivity : AppCompatActivity() {
 
         Log.e("seeTheStarts", questionCounter.toString())
         SharePreferenceData.setQuestionCounter(this, (questionCounter - 1 + 12) % 12)
+
+        mediaPlayer.release()
+        beatBox.release(mediaPlayer)
     }
 
     private fun startAndVisibleStarts() {
@@ -375,28 +387,38 @@ class StartGameActivity : AppCompatActivity() {
         Handler().postDelayed(object : Runnable {
             override fun run() {
 
-                animatedStar1.x=animatedStar1X
-                animatedStar1.y=animatedStar1Y
-                animatedStar2.x=animatedStar2X
-                animatedStar2.y=animatedStar2Y
-                animatedStar3.x=animatedStar3X
-                animatedStar3.y=animatedStar3Y
-                animatedStar4.x=animatedStar4X
-                animatedStar4.y=animatedStar4Y
-                animatedStar5.x=animatedStar5X
-                animatedStar5.y=animatedStar5Y
+                animatedStar1.x = animatedStar1X
+                animatedStar1.y = animatedStar1Y
+                animatedStar2.x = animatedStar2X
+                animatedStar2.y = animatedStar2Y
+                animatedStar3.x = animatedStar3X
+                animatedStar3.y = animatedStar3Y
+                animatedStar4.x = animatedStar4X
+                animatedStar4.y = animatedStar4Y
+                animatedStar5.x = animatedStar5X
+                animatedStar5.y = animatedStar5Y
             }
 
         }, 4000)
 
     }
 
-    private fun resetStarsPosition()
-    {
-               animatedStar1.visibility=View.INVISIBLE
-        animatedStar2.visibility=View.INVISIBLE
-        animatedStar3.visibility=View.INVISIBLE
-        animatedStar4.visibility=View.INVISIBLE
-        animatedStar5.visibility=View.INVISIBLE
+    private fun resetStarsPosition() {
+        animatedStar1.visibility = View.INVISIBLE
+        animatedStar2.visibility = View.INVISIBLE
+        animatedStar3.visibility = View.INVISIBLE
+        animatedStar4.visibility = View.INVISIBLE
+        animatedStar5.visibility = View.INVISIBLE
     }
+
+    fun play(soundName:String,looping:Boolean) {
+
+        beatBox= BeatBox(this)
+        mediaPlayer = MediaPlayer()
+        for(item in beatBox.soundsList){
+            if(item.soundName.equals(soundName))
+                beatBox.play(item,mediaPlayer,looping)
+        }
+    }
+
 }

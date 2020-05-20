@@ -67,7 +67,7 @@ class BeatBox {
     }
 
 
-    fun play(sound: Sound,mediaPlayer: MediaPlayer,looping:Boolean) {
+    fun play(sound: Sound, mediaPlayer: MediaPlayer, looping: Boolean) {
 
         Log.e("playedSS", "played" + sound.soundName)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -87,7 +87,7 @@ class BeatBox {
                 afd.getStartOffset(),
                 afd.getLength()
             )
-            mediaPlayer.isLooping=looping
+            mediaPlayer.isLooping = looping
             mediaPlayer.prepareAsync()
             mediaPlayer.setOnPreparedListener(object : MediaPlayer.OnPreparedListener {
                 override fun onPrepared(mp: MediaPlayer?) {
@@ -100,7 +100,7 @@ class BeatBox {
         }
     }
 
-fun release(mediaPlayer: MediaPlayer){
-    mediaPlayer.release()
-}
+    fun release(mediaPlayer: MediaPlayer) {
+        mediaPlayer.release()
+    }
 }

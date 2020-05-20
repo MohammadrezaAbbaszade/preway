@@ -351,32 +351,32 @@ class StartGameActivity : AppCompatActivity() {
                     .y(starView.y)
                     .setDuration(500)
                     .start()
-
+                animatedStar1.startAnimation(getAnimation(R.anim.rotate_amim2))
                 animatedStar2.animate()
                     .x(starView.x)
                     .y(starView.y)
                     .setDuration(600)
                     .start()
-
+                animatedStar2.startAnimation(getAnimation(R.anim.rotate_amim2))
 
                 animatedStar3.animate()
                     .x(starView.x)
                     .y(starView.y)
                     .setDuration(700)
                     .start()
-
+                animatedStar3.startAnimation(getAnimation(R.anim.rotate_amim2))
                 animatedStar4.animate()
                     .x(starView.x)
                     .y(starView.y)
                     .setDuration(800)
                     .start()
-
+                animatedStar4.startAnimation(getAnimation(R.anim.rotate_amim2))
                 animatedStar5.animate()
                     .x(starView.x)
                     .y(starView.y)
                     .setDuration(900)
                     .start()
-
+                animatedStar5.startAnimation(getAnimation(R.anim.rotate_amim2))
 
             }
 

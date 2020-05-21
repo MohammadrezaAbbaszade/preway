@@ -1,10 +1,11 @@
-package com.akaf.preway
+package com.akaf.preway.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.akaf.preway.R
 
 class Adapter(val context: Context, var productList: List<Int>) :
     RecyclerView.Adapter<Adapter.ViewHolder>() {
@@ -12,7 +13,8 @@ class Adapter(val context: Context, var productList: List<Int>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.hq_announcement, parent, false)
-        val viewHolder = ViewHolder(view, context)
+        val viewHolder =
+            ViewHolder(view, context)
         return viewHolder
     }
 

@@ -1,4 +1,4 @@
-package com.akaf.preway
+package com.akaf.preway.views.fragments
 
 
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import com.akaf.preway.R
 
 /**
  * A simple [Fragment] subclass.
@@ -17,7 +18,8 @@ class NeedCoinDialogFragment : DialogFragment() {
     companion object {
         fun newInstance(): NeedCoinDialogFragment {
             val args = Bundle()
-            val fragment = NeedCoinDialogFragment()
+            val fragment =
+                NeedCoinDialogFragment()
             fragment.arguments = args
             return fragment
         }

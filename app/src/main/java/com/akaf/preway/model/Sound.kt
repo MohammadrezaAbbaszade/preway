@@ -1,6 +1,5 @@
-package com.akaf.preway
+package com.akaf.preway.model
 
-import android.content.Context
 import android.util.Log
 
 class Sound {

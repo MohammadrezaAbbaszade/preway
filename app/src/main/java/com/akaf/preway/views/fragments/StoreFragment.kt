@@ -1,4 +1,4 @@
-package com.akaf.preway
+package com.akaf.preway.views.fragments
 
 
 import android.content.Intent
@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_main.view.*
+import com.akaf.preway.R
+import com.akaf.preway.adapter.StoreAdapter
+import com.akaf.preway.views.activities.WebStoreActivity
 import kotlinx.android.synthetic.main.fragment_store.view.*
 import kotlinx.android.synthetic.main.store_header.view.*
 

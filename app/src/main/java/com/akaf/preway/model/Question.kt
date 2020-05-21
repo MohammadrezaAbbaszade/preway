@@ -1,6 +1,7 @@
-package com.akaf.preway
+package com.akaf.preway.model
 
 import android.content.Context
+import com.akaf.preway.R
 
 class Question(val context: Context) {
 

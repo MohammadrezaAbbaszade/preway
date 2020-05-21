@@ -1,11 +1,7 @@
-package com.akaf.preway
+package com.akaf.preway.views.activities
 
-import android.content.Intent
 import android.content.res.AssetFileDescriptor
-import android.media.AudioAttributes
-import android.media.AudioManager
 import android.media.MediaPlayer
-import android.net.Uri
 import android.os.*
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
@@ -15,6 +11,9 @@ import android.view.animation.Animation.RELATIVE_TO_SELF
 import android.view.animation.AnimationUtils
 import android.view.animation.RotateAnimation
 import android.widget.Button
+import com.akaf.preway.*
+import com.akaf.preway.model.BeatBox
+import com.akaf.preway.model.Question
 import kotlinx.android.synthetic.main.activity_start_game.*
 import kotlinx.android.synthetic.main.offair_question_counter_view.*
 
@@ -22,10 +21,6 @@ import kotlinx.android.synthetic.main.offair_question_counter_view.*
 import kotlinx.android.synthetic.main.offair_start_view.*
 import kotlinx.android.synthetic.main.offair_stats_animated_stars.*
 import kotlinx.android.synthetic.main.offair_stats_view.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.delay
-import java.io.IOException
 
 class StartGameActivity : AppCompatActivity() {
     val question by lazy {
@@ -39,7 +34,8 @@ var handler=Handler()
     lateinit var beatBox: BeatBox
     lateinit var timer: CountDownTimer
 
-    private var timerState = TimerState.Stopped
+    private var timerState =
+        TimerState.Stopped
     private var secondsRemaining = 0L
 
     private var time = 1
@@ -65,7 +61,10 @@ var handler=Handler()
         }
 
         startButton.setOnClickListener {
-            SharePreferenceData.setPlayerResult(this, true)
+            SharePreferenceData.setPlayerResult(
+                this,
+                true
+            )
             dailyChallengeTextView.visibility = View.GONE
             startButton.visibility = View.GONE
             offairQuestionView.visibility = View.INVISIBLE
@@ -104,7 +103,9 @@ var handler=Handler()
     private fun startQuestionCounter() {
         Log.e("seeTheStarts", "startQuestionCounter")
         Log.e("checkMedi","startQuestionCounter")
-        var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
+        var questionCounter = SharePreferenceData.getQuestionCounter(
+            this
+        )!!
         offairQuestionCounterView.startAnimation(getAnimation(R.anim.fade_in))
         offairQuestionCounterView.visibility = View.VISIBLE
 
@@ -131,11 +132,16 @@ Log.e("checkMedi","startAnimating")
         offairCountdownContainer.visibility = View.VISIBLE
 //        offairQuestionTextView.visibility = View.VISIBLE
 
-        var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
+        var questionCounter = SharePreferenceData.getQuestionCounter(
+            this
+        )!!
 
         Log.e("seeTheStarts", questionCounter.toString())
         offairQuestionTextView.setTextAutoTyping(question.questions.get(questionCounter))
-        SharePreferenceData.setQuestionCounter(this, (++questionCounter) % 12)
+        SharePreferenceData.setQuestionCounter(
+            this,
+            (++questionCounter) % 12
+        )
 
     }
 
@@ -143,7 +149,8 @@ Log.e("checkMedi","startAnimating")
         Log.e("checkMedi","startUpdateProgressBar")
         Log.e("seeTheStarts", "startUpdateProgressBar")
         playOtherSound(MusicName.OFFAIR_TIMER, false)
-        timerState = TimerState.Running
+        timerState =
+            TimerState.Running
 
         timer = object : CountDownTimer(10 * 1000, 1000) {
 
@@ -157,7 +164,8 @@ Log.e("checkMedi","startAnimating")
 
             override fun onFinish() {
                 Log.e("timeown", "finished")
-                timerState = TimerState.Stopped
+                timerState =
+                    TimerState.Stopped
                 time = 1
 
                 timesUp()
@@ -217,7 +225,9 @@ Log.e("checkMedi","startAnimating")
 
     private fun checkAnswer(answer: String): Boolean {
         Log.e("checkMedi","checkAnswer")
-        var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
+        var questionCounter = SharePreferenceData.getQuestionCounter(
+            this
+        )!!
         var correctAnswer = question.answers.get(questionCounter)
 
         return answer.equals(correctAnswer)
@@ -226,7 +236,9 @@ Log.e("checkMedi","startAnimating")
 
     private fun getAnswer(): String {
         Log.e("checkMedi","getAnswer")
-        var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
+        var questionCounter = SharePreferenceData.getQuestionCounter(
+            this
+        )!!
         var correctAnswer = question.answers.get(questionCounter)
 
         return correctAnswer
@@ -350,10 +362,15 @@ Log.e("checkMedi","startAnimating")
             timer.cancel()
         }
 
-        var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
+        var questionCounter = SharePreferenceData.getQuestionCounter(
+            this
+        )!!
 
         Log.e("seeTheStarts", questionCounter.toString())
-        SharePreferenceData.setQuestionCounter(this, (questionCounter - 1 + 12) % 12)
+        SharePreferenceData.setQuestionCounter(
+            this,
+            (questionCounter - 1 + 12) % 12
+        )
 
 
         beatBox.release(mediaPlayer)
@@ -479,7 +496,11 @@ Log.e("checkMedi","startAnimating")
     fun goToResultActivity() {
         Log.e("checkMedi","goToResultActivity")
         tasksAfterDestroying()
-        val intent = ResultActivity.newIntent(this, correctAnswerCount, incorrectAnswerCount)
+        val intent = ResultActivity.newIntent(
+            this,
+            correctAnswerCount,
+            incorrectAnswerCount
+        )
         startActivity(intent)
         finish()
     }

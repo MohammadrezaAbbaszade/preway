@@ -1,7 +1,8 @@
-package com.akaf.preway
+package com.akaf.preway.views.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.akaf.preway.R
 
 class HelpActivity : AppCompatActivity() {
 

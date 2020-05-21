@@ -1,16 +1,14 @@
-package com.akaf.preway
+package com.akaf.preway.adapter
 
 
 import android.app.AlertDialog
 import android.content.Context
-import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.leader_board_lest_item.view.*
+import com.akaf.preway.R
 import kotlinx.android.synthetic.main.store_raw_items.view.*
 
 class StoreAdapter(val context: Context, var productList: List<Int>) :
@@ -19,7 +17,8 @@ class StoreAdapter(val context: Context, var productList: List<Int>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.store_raw_items, parent, false)
-        val viewHolder = ViewHolder(view, context)
+        val viewHolder =
+            ViewHolder(view, context)
         return viewHolder
     }
 

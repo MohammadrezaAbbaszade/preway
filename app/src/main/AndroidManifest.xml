@@ -12,23 +12,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultActivity"></activity>
-        <activity android:name=".StartGameActivity" />
-        <activity android:name=".WebStoreActivity" />
-        <activity android:name=".HelpActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".views.activities.LoginActivity"></activity>
+        <activity android:name=".views.activities.ResultActivity" />
+        <activity android:name=".views.activities.StartGameActivity" />
+        <activity android:name=".views.activities.WebStoreActivity" />
+        <activity android:name=".views.activities.HelpActivity" />
+        <activity android:name=".views.activities.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondVerificationActivity" />
+        <activity android:name=".views.activities.SecondVerificationActivity" />
         <activity
-            android:name=".FirstVerificationActivity"
+            android:name=".views.activities.FirstVerificationActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name=".views.activities.MainActivity"
             android:screenOrientation="portrait" />
     </application>
 

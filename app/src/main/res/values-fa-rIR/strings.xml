@@ -104,4 +104,7 @@
     <string name="Use_a_Game_Unlock">از قفل بازی استفاده کنید</string>
     <string name="Start_the_Next_Game">شروع بای بعدی</string>
     <string name="Locked">قفل شده</string>
+    <string name="Enter_Username">نام کاربری را وارد کنید</string>
+    <string name="Enter_Referral_Code">کد معرف</string>
+    <string name="Username">نام کاربری</string>
 </resources>

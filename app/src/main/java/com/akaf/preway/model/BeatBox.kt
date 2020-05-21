@@ -1,4 +1,4 @@
-package com.akaf.preway
+package com.akaf.preway.model
 
 import android.content.Context
 import android.content.res.AssetFileDescriptor
@@ -6,7 +6,6 @@ import android.content.res.AssetManager
 import android.media.AudioAttributes
 import android.media.AudioManager
 import android.media.MediaPlayer
-import android.media.SoundPool
 import android.os.Build
 import android.util.Log
 import java.io.IOException

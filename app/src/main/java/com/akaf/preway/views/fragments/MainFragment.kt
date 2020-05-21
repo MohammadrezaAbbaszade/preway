@@ -1,4 +1,4 @@
-package com.akaf.preway
+package com.akaf.preway.views.fragments
 
 
 import android.app.AlertDialog
@@ -10,6 +10,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
+import com.akaf.preway.adapter.Adapter
+import com.akaf.preway.views.activities.HelpActivity
+import com.akaf.preway.R
+import com.akaf.preway.views.activities.StartGameActivity
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.footer_item.view.*
 import kotlinx.android.synthetic.main.fragment_main.view.*

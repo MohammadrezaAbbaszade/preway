@@ -1,10 +1,13 @@
-package com.akaf.preway
+package com.akaf.preway.views.activities
 
 import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.akaf.preway.model.BeatBox
+import com.akaf.preway.MusicName
+import com.akaf.preway.R
 import kotlinx.android.synthetic.main.activity_result.*
 
 class ResultActivity : AppCompatActivity() {

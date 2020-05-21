@@ -1,10 +1,11 @@
-package com.akaf.preway
+package com.akaf.preway.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.akaf.preway.R
 import kotlinx.android.synthetic.main.leader_board_lest_item.view.*
 
 class LeaderBoardAdapter(val context: Context, var productList: List<Int>) :
@@ -13,7 +14,8 @@ class LeaderBoardAdapter(val context: Context, var productList: List<Int>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.leader_board_lest_item, parent, false)
-        val viewHolder = ViewHolder(view, context)
+        val viewHolder =
+            ViewHolder(view, context)
         return viewHolder
     }
 

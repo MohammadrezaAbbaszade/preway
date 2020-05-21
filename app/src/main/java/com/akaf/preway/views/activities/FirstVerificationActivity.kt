@@ -1,4 +1,4 @@
-package com.akaf.preway
+package com.akaf.preway.views.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.animation.AnimationUtils
+import com.akaf.preway.R
 import kotlinx.android.synthetic.main.verification.*
 
 class FirstVerificationActivity : AppCompatActivity() {
@@ -13,7 +14,9 @@ class FirstVerificationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.verification)
-        val aniRotate = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_anim)
+        val aniRotate = AnimationUtils.loadAnimation(getApplicationContext(),
+            R.anim.rotate_anim
+        )
         verfication_background_image.startAnimation(aniRotate)
         verification_edit_text.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {

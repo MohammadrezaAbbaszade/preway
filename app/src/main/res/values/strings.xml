@@ -104,4 +104,7 @@ Challenge"</string>
     <string name="Use_a_Game_Unlock">Use a Game Unlock</string>
     <string name="Start_the_Next_Game">Start the Next Game</string>
     <string name="Locked">Locked</string>
+    <string name="Enter_Username">Enter UserName</string>
+    <string name="Enter_Referral_Code">Please Enter ReferralCode</string>
+    <string name="Username">Please Enter Username:</string>
 </resources>

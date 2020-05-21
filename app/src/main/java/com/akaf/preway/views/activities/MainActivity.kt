@@ -1,11 +1,12 @@
-package com.akaf.preway
+package com.akaf.preway.views.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import com.akaf.preway.R
+import com.akaf.preway.views.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.main_hq_footer_menu.*
 
 class MainActivity : AppCompatActivity() {
@@ -46,31 +47,40 @@ class MainActivity : AppCompatActivity() {
                             ).commit()
                         }
                     }
-                    R.id.page_store->{
+                    R.id.page_store ->{
                         if (!StoreFragment.newInstance().isVisible) {
                             fm.popBackStack()
-                            fm.beginTransaction().replace(R.id.fragment_container, StoreFragment.newInstance()).commit()
+                            fm.beginTransaction().replace(R.id.fragment_container,
+                                StoreFragment.newInstance()
+                            ).commit()
                         }
                     }
 
-                    R.id.page_lobby->{
+                    R.id.page_lobby ->{
                         if (!MainFragment.newInstance().isVisible) {
                             fm.popBackStack()
-                            fm.beginTransaction().replace(R.id.fragment_container, MainFragment.newInstance()).commit()
+                            fm.beginTransaction().replace(R.id.fragment_container,
+                                MainFragment.newInstance()
+                            ).commit()
                         }
                     }
-                    R.id.page_leaderboard->{
+                    R.id.page_leaderboard ->{
                         if (!LeaderBoardFragment.newInstance().isVisible) {
                             fm.popBackStack()
                             fm.beginTransaction()
-                                .replace(R.id.fragment_container, LeaderBoardFragment.newInstance()).commit()
+                                .replace(
+                                    R.id.fragment_container,
+                                    LeaderBoardFragment.newInstance()
+                                ).commit()
                         }
                     }
-                    R.id.page_profile->{
+                    R.id.page_profile ->{
                         if (!SettingFragment.newInstance().isVisible) {
                             fm.popBackStack()
                             fm.beginTransaction()
-                                .replace(R.id.fragment_container, SettingFragment.newInstance())
+                                .replace(R.id.fragment_container,
+                                    SettingFragment.newInstance()
+                                )
                                 .commit()
                         }
                     }

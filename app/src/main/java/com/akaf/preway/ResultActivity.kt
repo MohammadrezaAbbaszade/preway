@@ -28,7 +28,7 @@ class ResultActivity : AppCompatActivity() {
         val incorrectAnswer=intent.getIntExtra(ICORECT_ANSWER,0)
         resultsCorrectCountView.text=correctAnswer.toString()
         resultsIncorrectCountView.text=incorrectAnswer.toString()
-        play("offair_results.mp3",true)
+        play(MusicName.OFFAIR_RESULTS,true)
     }
 
     fun play(soundName: String, looping: Boolean) {

@@ -55,7 +55,7 @@ var handler=Handler()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start_game)
 
-        play("offair_music.mp3", true)
+        play(MusicName.OFFAIR_MUSCI, true)
 
 
         if (!SharePreferenceData.getPlayerResult(this)!!) {
@@ -142,7 +142,7 @@ Log.e("checkMedi","startAnimating")
     private fun startUpdateProgressBar() {
         Log.e("checkMedi","startUpdateProgressBar")
         Log.e("seeTheStarts", "startUpdateProgressBar")
-        playOtherSound("offair_timer.mp3", false)
+        playOtherSound(MusicName.OFFAIR_TIMER, false)
         timerState = TimerState.Running
 
         timer = object : CountDownTimer(10 * 1000, 1000) {
@@ -248,7 +248,7 @@ Log.e("checkMedi","startAnimating")
         offairCountdownContainer.visibility = View.INVISIBLE
         var drawable = resources.getDrawable(R.drawable.round_correct_answer)
         if (checkAnswer(view.text.toString())) {
-            playOtherSound("correct_general.mp3", false)
+            playOtherSound(MusicName.OFFAIR_CORRECT, false)
             correctAnswerCount++
             offairTrueResultPillView.visibility = View.VISIBLE
             view.background = drawable
@@ -260,7 +260,7 @@ Log.e("checkMedi","startAnimating")
 
 
         } else {
-            playOtherSound("incorrect_general.mp3", false)
+            playOtherSound(MusicName.OFFAIR_INCORRECT, false)
             incorrectAnswerCount++
             offairResultPillView.visibility = View.VISIBLE
 
@@ -382,7 +382,7 @@ Log.e("checkMedi","startAnimating")
         handler.postDelayed(object : Runnable {
             override fun run() {
                 Log.e("checkMedi","startAndVisibleStarts1")
-                playOtherSound("offair_points.mp3", false)
+                playOtherSound(MusicName.OFFAIR_POINTS, false)
                 animatedStar1.animate()
                     .x(starView.x)
                     .y(starView.y)

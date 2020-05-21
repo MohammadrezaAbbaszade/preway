@@ -1,5 +1,6 @@
 package com.akaf.preway
 
+import android.content.Intent
 import android.content.res.AssetFileDescriptor
 import android.media.AudioAttributes
 import android.media.AudioManager
@@ -30,7 +31,7 @@ class StartGameActivity : AppCompatActivity() {
     val question by lazy {
         Question(this)
     }
-
+var handler=Handler()
     enum class TimerState {
         Stopped, Paused, Running
     }
@@ -42,16 +43,19 @@ class StartGameActivity : AppCompatActivity() {
     private var secondsRemaining = 0L
 
     private var time = 1
-
+    private var questionCounter = 0
+    private var correctAnswerCount = 0
+    private var incorrectAnswerCount = 0
     lateinit var afd: AssetFileDescriptor
 
     lateinit var mediaPlayer: MediaPlayer
+    lateinit var mediaPlayer2: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start_game)
 
-        play("offair_music.mp3",true)
+        play("offair_music.mp3", true)
 
 
         if (!SharePreferenceData.getPlayerResult(this)!!) {
@@ -82,7 +86,7 @@ class StartGameActivity : AppCompatActivity() {
             answerClicked(third_answer)
         }
 
-        Handler().postDelayed(object : Runnable {
+        handler.postDelayed(object : Runnable {
             override fun run() {
 
                 setQuestionsText()
@@ -99,6 +103,7 @@ class StartGameActivity : AppCompatActivity() {
 
     private fun startQuestionCounter() {
         Log.e("seeTheStarts", "startQuestionCounter")
+        Log.e("checkMedi","startQuestionCounter")
         var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
         offairQuestionCounterView.startAnimation(getAnimation(R.anim.fade_in))
         offairQuestionCounterView.visibility = View.VISIBLE
@@ -108,7 +113,7 @@ class StartGameActivity : AppCompatActivity() {
     }
 
     private fun startAnimating() {
-
+Log.e("checkMedi","startAnimating")
         Log.e("seeTheStarts", "startAnimating")
         val makeVertical =
             RotateAnimation(270F, 270F, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f);
@@ -119,7 +124,7 @@ class StartGameActivity : AppCompatActivity() {
     }
 
     private fun setQuestionsText() {
-
+        Log.e("checkMedi","setQuestionsText")
         offairQuestionCounterView.startAnimation(getAnimation(R.anim.fade_out))
         offairQuestionCounterView.visibility = View.GONE
         offairQuestionView.visibility = View.VISIBLE
@@ -129,18 +134,21 @@ class StartGameActivity : AppCompatActivity() {
         var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
 
         Log.e("seeTheStarts", questionCounter.toString())
-        offairQuestionTextView.text = question.questions.get(questionCounter)
+        offairQuestionTextView.setTextAutoTyping(question.questions.get(questionCounter))
         SharePreferenceData.setQuestionCounter(this, (++questionCounter) % 12)
 
     }
 
     private fun startUpdateProgressBar() {
+        Log.e("checkMedi","startUpdateProgressBar")
         Log.e("seeTheStarts", "startUpdateProgressBar")
+        playOtherSound("offair_timer.mp3", false)
         timerState = TimerState.Running
 
         timer = object : CountDownTimer(10 * 1000, 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
+
                 Log.e("timeown", time.toString() + " /" + millisUntilFinished.toString())
                 secondsRemaining = millisUntilFinished / 1000
                 updateTimerTextView(time, 10)
@@ -170,6 +178,8 @@ class StartGameActivity : AppCompatActivity() {
 
     private fun timesUp() {
         Log.e("seeTheStarts", "timesUp")
+        Log.e("checkMedi","timesUp")
+        mediaPlayer2.release()
 
         offairCountdownContainer.visibility = View.INVISIBLE
 //        offairQuestionTextView.visibility = View.INVISIBLE
@@ -179,20 +189,22 @@ class StartGameActivity : AppCompatActivity() {
         second_answer.isEnabled = false
         third_answer.isEnabled = false
 
-        Handler().postDelayed(object : Runnable {
+        handler.postDelayed(object : Runnable {
             override fun run() {
-
+                Log.e("checkMedi","timesUp1")
                 offairQuestionView.startAnimation(getAnimation(R.anim.fade_out))
                 offairQuestionView.visibility = View.INVISIBLE
                 offairTimesUpPillView.visibility = View.INVISIBLE
+                offairQuestionTextView.text = ""
                 startQuestionCounter()
             }
 
         }, 2000)
 
 
-        Handler().postDelayed(object : Runnable {
+        handler.postDelayed(object : Runnable {
             override fun run() {
+                Log.e("checkMedi","timesUp2")
                 resetAnswers()
                 setQuestionsText()
 
@@ -204,6 +216,7 @@ class StartGameActivity : AppCompatActivity() {
     }
 
     private fun checkAnswer(answer: String): Boolean {
+        Log.e("checkMedi","checkAnswer")
         var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
         var correctAnswer = question.answers.get(questionCounter)
 
@@ -212,6 +225,7 @@ class StartGameActivity : AppCompatActivity() {
     }
 
     private fun getAnswer(): String {
+        Log.e("checkMedi","getAnswer")
         var questionCounter = SharePreferenceData.getQuestionCounter(this)!!
         var correctAnswer = question.answers.get(questionCounter)
 
@@ -226,14 +240,19 @@ class StartGameActivity : AppCompatActivity() {
 
 
     public fun answerClicked(view: Button) {
+        Log.e("checkMedi","answerClicked")
+        mediaPlayer2.release()
         timer.cancel()
         time = 1
+        questionCounter++
         offairCountdownContainer.visibility = View.INVISIBLE
         var drawable = resources.getDrawable(R.drawable.round_correct_answer)
         if (checkAnswer(view.text.toString())) {
-
+            playOtherSound("correct_general.mp3", false)
+            correctAnswerCount++
             offairTrueResultPillView.visibility = View.VISIBLE
             view.background = drawable
+
             startAndVisibleStarts()
             first_answer.isEnabled = false
             second_answer.isEnabled = false
@@ -241,6 +260,8 @@ class StartGameActivity : AppCompatActivity() {
 
 
         } else {
+            playOtherSound("incorrect_general.mp3", false)
+            incorrectAnswerCount++
             offairResultPillView.visibility = View.VISIBLE
 
             resetTheviewAfterAnswer()
@@ -266,14 +287,19 @@ class StartGameActivity : AppCompatActivity() {
 
     private fun resetTheviewAfterAnswer() {
         Log.e("resetTheviewAfterAnswer", "yes")
-
-        Handler().postDelayed(object : Runnable {
+        Log.e("checkMedi","resetTheviewAfterAnswer")
+        handler.postDelayed(object : Runnable {
             override fun run() {
-
+                Log.e("checkMedi","resetTheviewAfterAnswer1")
                 offairQuestionView.startAnimation(getAnimation(R.anim.fade_out))
                 offairQuestionView.visibility = View.INVISIBLE
                 offairResultPillView.visibility = View.INVISIBLE
                 offairTrueResultPillView.visibility = View.INVISIBLE
+                if (questionCounter == 12) {
+                    tasksAfterDestroying()
+                    goToResultActivity()
+                    return
+                }
                 startQuestionCounter()
                 resetStarsPosition()
             }
@@ -281,9 +307,9 @@ class StartGameActivity : AppCompatActivity() {
         }, 2000)
 
 
-        Handler().postDelayed(object : Runnable {
+        handler.postDelayed(object : Runnable {
             override fun run() {
-                //                    offairResultPillView.startAnimation(getAnimation(R.anim.fade_out))
+                Log.e("checkMedi","resetTheviewAfterAnswer2")
                 offairResultPillView.visibility = View.INVISIBLE
 
 
@@ -300,7 +326,7 @@ class StartGameActivity : AppCompatActivity() {
 
     fun resetAnswers() {
 
-
+        Log.e("checkMedi","resetAnswers")
         var drawable = resources.getDrawable(R.drawable.answer_round)
         first_answer.background = drawable
         second_answer.background = drawable
@@ -313,6 +339,13 @@ class StartGameActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        tasksAfterDestroying()
+    }
+
+    private fun tasksAfterDestroying() {
+        Log.e("checkMedi","tasksAfterDestroying")
+        handler.removeCallbacksAndMessages(null)
+
         if (timerState.equals(TimerState.Running)) {
             timer.cancel()
         }
@@ -322,11 +355,13 @@ class StartGameActivity : AppCompatActivity() {
         Log.e("seeTheStarts", questionCounter.toString())
         SharePreferenceData.setQuestionCounter(this, (questionCounter - 1 + 12) % 12)
 
-        mediaPlayer.release()
+
         beatBox.release(mediaPlayer)
+        beatBox.release(mediaPlayer2)
     }
 
     private fun startAndVisibleStarts() {
+        Log.e("checkMedi","startAndVisibleStarts")
         var animatedStar1X = animatedStar1.x
         var animatedStar1Y = animatedStar1.y
         var animatedStar2X = animatedStar2.x
@@ -344,39 +379,47 @@ class StartGameActivity : AppCompatActivity() {
         animatedStar4.visibility = View.VISIBLE
         animatedStar5.visibility = View.VISIBLE
 
-        Handler().postDelayed(object : Runnable {
+        handler.postDelayed(object : Runnable {
             override fun run() {
+                Log.e("checkMedi","startAndVisibleStarts1")
+                playOtherSound("offair_points.mp3", false)
                 animatedStar1.animate()
                     .x(starView.x)
                     .y(starView.y)
+                    .rotationBy(36000F)
                     .setDuration(500)
                     .start()
-                animatedStar1.startAnimation(getAnimation(R.anim.rotate_amim2))
+
                 animatedStar2.animate()
                     .x(starView.x)
                     .y(starView.y)
+                    .rotationBy(36000F)
                     .setDuration(600)
                     .start()
-                animatedStar2.startAnimation(getAnimation(R.anim.rotate_amim2))
+
 
                 animatedStar3.animate()
                     .x(starView.x)
                     .y(starView.y)
+                    .rotationBy(36000F)
                     .setDuration(700)
                     .start()
-                animatedStar3.startAnimation(getAnimation(R.anim.rotate_amim2))
+
+
                 animatedStar4.animate()
                     .x(starView.x)
                     .y(starView.y)
+                    .rotationBy(36000F)
                     .setDuration(800)
                     .start()
-                animatedStar4.startAnimation(getAnimation(R.anim.rotate_amim2))
+
                 animatedStar5.animate()
                     .x(starView.x)
                     .y(starView.y)
+                    .rotationBy(36000F)
                     .setDuration(900)
                     .start()
-                animatedStar5.startAnimation(getAnimation(R.anim.rotate_amim2))
+
 
             }
 
@@ -384,9 +427,9 @@ class StartGameActivity : AppCompatActivity() {
 
 
         resetTheviewAfterAnswer()
-        Handler().postDelayed(object : Runnable {
+        handler.postDelayed(object : Runnable {
             override fun run() {
-
+                Log.e("checkMedi","startAndVisibleStarts2")
                 animatedStar1.x = animatedStar1X
                 animatedStar1.y = animatedStar1Y
                 animatedStar2.x = animatedStar2X
@@ -397,6 +440,7 @@ class StartGameActivity : AppCompatActivity() {
                 animatedStar4.y = animatedStar4Y
                 animatedStar5.x = animatedStar5X
                 animatedStar5.y = animatedStar5Y
+
             }
 
         }, 4000)
@@ -411,14 +455,33 @@ class StartGameActivity : AppCompatActivity() {
         animatedStar5.visibility = View.INVISIBLE
     }
 
-    fun play(soundName:String,looping:Boolean) {
-
-        beatBox= BeatBox(this)
+    fun play(soundName: String, looping: Boolean) {
+        Log.e("checkMedi","play")
+        beatBox = BeatBox(this)
         mediaPlayer = MediaPlayer()
-        for(item in beatBox.soundsList){
-            if(item.soundName.equals(soundName))
-                beatBox.play(item,mediaPlayer,looping)
+        for (item in beatBox.soundsList) {
+            if (item.soundName.equals(soundName))
+                beatBox.play(item, mediaPlayer, looping)
         }
+    }
+
+    fun playOtherSound(soundName: String, looping: Boolean) {
+        Log.e("checkMedi","playOtherSound")
+        mediaPlayer2 = MediaPlayer()
+
+        for (item in beatBox.soundsList) {
+            if (item.soundName.equals(soundName))
+                beatBox.play(item, mediaPlayer2, looping)
+        }
+
+    }
+
+    fun goToResultActivity() {
+        Log.e("checkMedi","goToResultActivity")
+        tasksAfterDestroying()
+        val intent = ResultActivity.newIntent(this, correctAnswerCount, incorrectAnswerCount)
+        startActivity(intent)
+        finish()
     }
 
 }

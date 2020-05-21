@@ -94,4 +94,14 @@
     <string name="AThreeOne">sample1</string>
     <string name="AThreeTwo">sample2</string>
     <string name="AThreeThree">sample3</string>
+
+    <string name="Results">نتیجه</string>
+    <string name="You_Earned">بدست آوردید</string>
+    <string name="Points">امتیازات</string>
+    <string name="Coins">سکه ها</string>
+    <string name="Power_Ups">قدرت بالا</string>
+    <string name="Unlock_Next_Game">قفل بازی بعد</string>
+    <string name="Use_a_Game_Unlock">از قفل بازی استفاده کنید</string>
+    <string name="Start_the_Next_Game">شروع بای بعدی</string>
+    <string name="Locked">قفل شده</string>
 </resources>

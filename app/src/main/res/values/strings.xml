@@ -95,5 +95,13 @@ Challenge"</string>
     <string name="AThreeOne">sample1</string>
     <string name="AThreeTwo">sample2</string>
     <string name="AThreeThree">sample3</string>
-
+    <string name="Results">Results</string>
+    <string name="You_Earned">You Earned</string>
+    <string name="Points">Points</string>
+    <string name="Coins">Coins</string>
+    <string name="Power_Ups">Power Ups</string>
+    <string name="Unlock_Next_Game">Unlock Next Game</string>
+    <string name="Use_a_Game_Unlock">Use a Game Unlock</string>
+    <string name="Start_the_Next_Game">Start the Next Game</string>
+    <string name="Locked">Locked</string>
 </resources>

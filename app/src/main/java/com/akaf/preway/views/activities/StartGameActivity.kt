@@ -90,8 +90,6 @@ var handler=Handler()
 
                 setQuestionsText()
 
-                startAnimating()
-
                 startUpdateProgressBar()
             }
 
@@ -113,16 +111,6 @@ var handler=Handler()
 
     }
 
-    private fun startAnimating() {
-Log.e("checkMedi","startAnimating")
-        Log.e("seeTheStarts", "startAnimating")
-        val makeVertical =
-            RotateAnimation(270F, 270F, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f);
-        makeVertical.setFillAfter(true)
-        offairCountdownProgressBar.startAnimation(makeVertical)
-        offairCountdownProgressBar.setSecondaryProgress(10)
-        offairCountdownProgressBar.setProgress(0)
-    }
 
     private fun setQuestionsText() {
         Log.e("checkMedi","setQuestionsText")
@@ -130,7 +118,7 @@ Log.e("checkMedi","startAnimating")
         offairQuestionCounterView.visibility = View.GONE
         offairQuestionView.visibility = View.VISIBLE
         offairCountdownContainer.visibility = View.VISIBLE
-//        offairQuestionTextView.visibility = View.VISIBLE
+
 
         var questionCounter = SharePreferenceData.getQuestionCounter(
             this
@@ -149,6 +137,8 @@ Log.e("checkMedi","startAnimating")
         Log.e("checkMedi","startUpdateProgressBar")
         Log.e("seeTheStarts", "startUpdateProgressBar")
         playOtherSound(MusicName.OFFAIR_TIMER, false)
+        offairCountdownProgressBar.progress=0f
+        offairCountdownProgressBar.setProgressWithAnimation(100f, 10000)
         timerState =
             TimerState.Running
 
@@ -179,9 +169,6 @@ Log.e("checkMedi","startAnimating")
 
     private fun updateTimerTextView(startTime: Int, endTime: Int) {
         offairCountdownTextView.text = startTime.toString()
-        offairCountdownProgressBar.setMax(endTime)
-        offairCountdownProgressBar.setSecondaryProgress(endTime)
-        offairCountdownProgressBar.setProgress(startTime)
     }
 
     private fun timesUp() {
@@ -190,9 +177,10 @@ Log.e("checkMedi","startAnimating")
         mediaPlayer2.release()
 
         offairCountdownContainer.visibility = View.INVISIBLE
-//        offairQuestionTextView.visibility = View.INVISIBLE
-        offairTimesUpPillView.visibility = View.VISIBLE
+        offairCountdownTextView.text=""
 
+        offairTimesUpPillView.visibility = View.VISIBLE
+        offairCountdownProgressBar.progress=0f
         first_answer.isEnabled = false
         second_answer.isEnabled = false
         third_answer.isEnabled = false
@@ -374,7 +362,9 @@ Log.e("checkMedi","startAnimating")
 
 
         beatBox.release(mediaPlayer)
-        beatBox.release(mediaPlayer2)
+        if(mediaPlayer2!=null) {
+            beatBox.release(mediaPlayer2)
+        }
     }
 
     private fun startAndVisibleStarts() {

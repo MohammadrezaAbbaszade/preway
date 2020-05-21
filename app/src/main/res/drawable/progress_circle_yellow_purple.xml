@@ -6,10 +6,14 @@
         </shape>
     </item>
     <item android:id="@android:id/progress">
-
+        <rotate android:fromDegrees="270"
+            android:toDegrees="270"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:duration="100000">
         <shape android:shape="ring" android:useLevel="true" android:thickness="5.0dip">
             <solid android:color="@color/words_countdown_progress_bar" />
         </shape>
-
+        </rotate>
     </item>
 </layer-list>

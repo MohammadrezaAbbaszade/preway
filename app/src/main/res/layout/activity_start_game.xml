@@ -50,12 +50,15 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/subheadline" />
 
-                <ProgressBar
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
                     android:id="@+id/offairCountdownProgressBar"
-                    style="?android:attr/progressBarStyleHorizontal"
+                    style="?android:attr/progressBarStyle"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:progressDrawable="@drawable/progress_circle_yellow_purple" />
+                    app:cpb_background_progressbar_color="@color/hq_purple_alpha_50"
+                    app:cpb_background_progressbar_width="5dp"
+                    app:cpb_progressbar_color="@color/words_countdown_progress_bar"
+                    app:cpb_progress="0" />
 
 
             </FrameLayout>

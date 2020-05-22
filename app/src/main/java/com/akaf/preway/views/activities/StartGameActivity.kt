@@ -69,7 +69,15 @@ var handler=Handler()
             startButton.visibility = View.GONE
             offairQuestionView.visibility = View.INVISIBLE
             startQuestionCounter()
+            handler.postDelayed(object : Runnable {
+                override fun run() {
 
+                    setQuestionsText()
+
+                    startUpdateProgressBar()
+                }
+
+            }, 4000)
         }
         first_answer.setOnClickListener {
 
@@ -85,15 +93,7 @@ var handler=Handler()
             answerClicked(third_answer)
         }
 
-        handler.postDelayed(object : Runnable {
-            override fun run() {
 
-                setQuestionsText()
-
-                startUpdateProgressBar()
-            }
-
-        }, 4000)
 
 
     }
@@ -118,7 +118,7 @@ var handler=Handler()
         offairQuestionCounterView.visibility = View.GONE
         offairQuestionView.visibility = View.VISIBLE
         offairCountdownContainer.visibility = View.VISIBLE
-
+        answer_options.visibility=View.VISIBLE
 
         var questionCounter = SharePreferenceData.getQuestionCounter(
             this

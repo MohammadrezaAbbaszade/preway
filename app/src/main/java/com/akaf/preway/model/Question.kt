@@ -27,18 +27,18 @@ class Question(val context: Context) {
         questions.add(context.resources.getString(R.string.Twelve))
 
 
+        answers.add(context.resources.getString(R.string.SampleFourth))
+        answers.add(context.resources.getString(R.string.AThreeTwo))
+        answers.add(context.resources.getString(R.string.AThreeOne))
+        answers.add(context.resources.getString(R.string.AThreeTwo))
+        answers.add(context.resources.getString(R.string.AThreeThree))
+        answers.add(context.resources.getString(R.string.SampleFourth))
+        answers.add(context.resources.getString(R.string.AThreeOne))
         answers.add(context.resources.getString(R.string.AThreeTwo))
         answers.add(context.resources.getString(R.string.AThreeTwo))
         answers.add(context.resources.getString(R.string.AThreeOne))
-        answers.add(context.resources.getString(R.string.AThreeTwo))
         answers.add(context.resources.getString(R.string.AThreeThree))
-        answers.add(context.resources.getString(R.string.AThreeThree))
-        answers.add(context.resources.getString(R.string.AThreeOne))
-        answers.add(context.resources.getString(R.string.AThreeTwo))
-        answers.add(context.resources.getString(R.string.AThreeTwo))
-        answers.add(context.resources.getString(R.string.AThreeOne))
-        answers.add(context.resources.getString(R.string.AThreeThree))
-        answers.add(context.resources.getString(R.string.AThreeThree))
+        answers.add(context.resources.getString(R.string.SampleFourth))
 
     }
 

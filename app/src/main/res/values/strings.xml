@@ -95,6 +95,7 @@ Challenge"</string>
     <string name="AThreeOne">sample1</string>
     <string name="AThreeTwo">sample2</string>
     <string name="AThreeThree">sample3</string>
+    <string name="SampleFourth">sample4</string>
     <string name="Results">Results</string>
     <string name="You_Earned">You Earned</string>
     <string name="Points">Points</string>
@@ -107,4 +108,6 @@ Challenge"</string>
     <string name="Enter_Username">Enter UserName</string>
     <string name="Enter_Referral_Code">Please Enter ReferralCode</string>
     <string name="Username">Please Enter Username:</string>
+    <string name="liveShow">Live Show</string>
+
 </resources>

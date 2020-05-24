@@ -10,6 +10,7 @@
     <Button
         android:textColor="@color/hq_blue"
         android:id="@+id/startButton"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/grid_8"
@@ -71,7 +72,7 @@
             android:orientation="vertical">
 
             <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/add_task"
+                android:id="@+id/remove_Answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -94,7 +95,7 @@
             android:orientation="vertical">
 
             <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/add_task"
+                android:id="@+id/askpeople"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -116,7 +117,7 @@
             android:orientation="vertical">
 
             <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/add_task"
+                android:id="@+id/again_chance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -133,6 +134,49 @@
         </LinearLayout>
 
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/powerups_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+    android:visibility="invisible"
+        android:layout_marginBottom="@dimen/grid_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal">
+        <Button
+            android:textColor="@color/hq_blue"
+            android:id="@+id/power_ups_people"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/grid_16"
+            android:text="جون بیشتر"
+            android:drawableStart="@drawable/ic_heart_round_background_filled"
+            android:backgroundTint="@color/hq_yellow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/ButtonRound" />
+    <Button
+        android:textColor="@color/hq_blue"
+        android:id="@+id/power_ups_delete"
+        android:enabled="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/grid_16"
+        android:layout_weight="1"
+        android:text="پاک کن"
+        android:drawableStart="@drawable/ic_eraser"
+        android:layout_marginEnd="5dp"
+        android:drawablePadding="5dp"
+        android:backgroundTint="@color/hq_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/ButtonRound" />
 
-
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -211,7 +211,7 @@
                     android:background="@drawable/answer_round"
                     android:paddingStart="@dimen/grid_3"
                     android:paddingEnd="@dimen/grid_3"
-                    android:text="@string/AThreeThree"
+                    android:text="@string/SampleFourth"
                     android:textColor="@color/white"
                     android:textSize="@dimen/phone_verification_text" />
             </LinearLayout>

@@ -42,6 +42,47 @@
                 android:textColor="@color/text_primary"
                 android:textSize="@dimen/caption_1" />
         </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/grid_1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="start"
+
+                android:src="@drawable/ic_default_avatar_cloud" />
+
+            <TextView
+                android:id="@+id/lobbyHeaderCoinBalanceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/grid_1"
+                android:fontFamily="@font/circularstdbold"
+                android:text="0"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/caption_1" />
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -66,7 +107,6 @@
         android:backgroundTint="@color/hq_blue"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
-
         android:text="@string/play_now"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,5 +129,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
-
+    <Button
+        android:id="@+id/liveShowButton"
+        style="@style/ButtonRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/hq_blue"
+        android:layout_marginTop="10dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="@string/liveShow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/challengeButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

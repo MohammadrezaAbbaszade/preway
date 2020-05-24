@@ -94,7 +94,7 @@
     <string name="AThreeOne">sample1</string>
     <string name="AThreeTwo">sample2</string>
     <string name="AThreeThree">sample3</string>
-
+    <string name="SampleFourth">sample4</string>
     <string name="Results">نتیجه</string>
     <string name="You_Earned">بدست آوردید</string>
     <string name="Points">امتیازات</string>
@@ -107,4 +107,5 @@
     <string name="Enter_Username">نام کاربری را وارد کنید</string>
     <string name="Enter_Referral_Code">کد معرف</string>
     <string name="Username">نام کاربری</string>
+    <string name="liveShow">لایو شو</string>
 </resources>

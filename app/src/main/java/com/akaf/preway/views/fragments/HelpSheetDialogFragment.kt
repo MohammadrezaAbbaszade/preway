@@ -19,7 +19,11 @@ class HelpSheetDialogFragment : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bottom_sheet_dialog, container, false)
+        val view= inflater.inflate(R.layout.fragment_bottom_sheet_dialog, container, false)
+
+
+
+        return view
     }
 
 

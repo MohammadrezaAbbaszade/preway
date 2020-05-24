@@ -65,9 +65,15 @@ class MainFragment : Fragment() {
 
         view.challengeButton.setOnClickListener {
 
-            val intent = Intent(activity, StartGameActivity::class.java)
+            val intent = StartGameActivity.newIntent(context!!,false)
             startActivity(intent)
 
+        }
+
+        view.liveShowButton.setOnClickListener {
+
+            val intent = StartGameActivity.newIntent(context!!,true)
+            startActivity(intent)
         }
         return view
     }

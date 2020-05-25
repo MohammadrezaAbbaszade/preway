@@ -11,6 +11,7 @@ import com.akaf.preway.R
 import com.akaf.preway.adapter.Adapter
 import com.akaf.preway.adapter.SettingAdapter
 import com.akaf.preway.views.activities.CashOutActivity
+import com.akaf.preway.views.activities.EditProfileActivity
 import com.akaf.preway.views.activities.WebStoreActivity
 import kotlinx.android.synthetic.main.fragment_main.view.*
 import kotlinx.android.synthetic.main.fragment_setting.view.*
@@ -44,7 +45,11 @@ class SettingFragment : Fragment() {
         val recyclerViewImages = ArrayList<Int>()
         recyclerViewImages.add(1)
         initRecyclerView(recyclerViewImages, view)
+view.setting_profile_progress.setOnClickListener {
+    val intent = Intent(activity, EditProfileActivity::class.java)
+    startActivity(intent)
 
+}
         view.setting_cashout.setOnClickListener {
             val intent = Intent(activity, CashOutActivity::class.java)
             startActivity(intent)

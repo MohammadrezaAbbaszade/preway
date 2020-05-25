@@ -45,7 +45,7 @@ class MainFragment : Fragment() {
         initRecyclerView(recyclerViewImages, view)
 
         view.getHelpButton.setOnClickListener {
-            val intent = Intent(activity, HelpActivity::class.java)
+            val intent = HelpActivity.newIntent(context!!)
             startActivity(intent)
         }
         view.legalButton.setOnClickListener {

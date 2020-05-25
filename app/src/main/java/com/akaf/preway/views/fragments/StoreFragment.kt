@@ -38,7 +38,7 @@ class StoreFragment : Fragment() {
         initRecyclerView(recyclerViewImages,view)
 
         view.webStoreButton.setOnClickListener {
-            val intent = Intent(activity, WebStoreActivity::class.java)
+            val intent = WebStoreActivity.newIntent(context!!)
             startActivity(intent)
         }
 

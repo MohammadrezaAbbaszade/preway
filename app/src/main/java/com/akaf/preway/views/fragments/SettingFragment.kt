@@ -46,12 +46,12 @@ class SettingFragment : Fragment() {
         recyclerViewImages.add(1)
         initRecyclerView(recyclerViewImages, view)
 view.setting_profile_progress.setOnClickListener {
-    val intent = Intent(activity, EditProfileActivity::class.java)
+    val intent = EditProfileActivity.newIntent(context!!)
     startActivity(intent)
 
 }
         view.setting_cashout.setOnClickListener {
-            val intent = Intent(activity, CashOutActivity::class.java)
+            val intent = CashOutActivity.newIntent(context!!)
             startActivity(intent)
 
         }

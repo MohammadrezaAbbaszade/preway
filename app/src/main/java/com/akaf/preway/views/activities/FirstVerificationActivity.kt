@@ -1,5 +1,6 @@
 package com.akaf.preway.views.activities
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,13 @@ import kotlinx.android.synthetic.main.verification.*
 
 class FirstVerificationActivity : AppCompatActivity() {
 
+
+    companion object {
+        fun newIntent(context: Context): Intent {
+            val intent = Intent(context, FirstVerificationActivity::class.java)
+            return intent
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.verification)
@@ -35,7 +43,7 @@ class FirstVerificationActivity : AppCompatActivity() {
 
 
         verification_submit_btn.setOnClickListener {
-            val intent= Intent(this, SecondVerificationActivity::class.java)
+            val intent= SecondVerificationActivity.newIntent(this)
             startActivity(intent)
         }
 

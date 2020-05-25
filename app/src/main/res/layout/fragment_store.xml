@@ -18,10 +18,87 @@
         android:paddingStart="@dimen/grid_1"
         android:paddingTop="@dimen/grid_2"
         android:paddingEnd="@dimen/grid_1"
-        android:paddingBottom="@dimen/grid_2"
+        android:paddingBottom="15dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/webStoreButton" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:text="سکه اضافه میخوای؟" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+        android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_gift"
+            android:drawablePadding="12dp"
+            android:text="دوستاتو دعون کن جایزه بگیر" />
+
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+
+        android:layout_marginEnd="15dp"
+
+        android:background="@drawable/setting_button_round">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="تخفیف شب یلدا"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="400"
+            android:drawablePadding="9dp"
+            android:drawableEnd="@drawable/ic_coin"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/button_round_yellow"
+        android:paddingTop="15dp"
+        android:text="تبلیغات حذف کن: 3000 تومان"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+</LinearLayout>
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

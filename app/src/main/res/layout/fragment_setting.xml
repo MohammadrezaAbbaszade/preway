@@ -15,7 +15,7 @@
          />
 
     <include
-        layout="@layout/sample"
+        layout="@layout/setting_header_profile"
         />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -96,7 +96,7 @@
             android:textColor="#000"/>
 
             <ProgressBar
-                android:id="@+id/setting_progress_bar"
+                android:id="@+id/setting_progress_bar_day_count"
                 android:progressDrawable="@drawable/days_counter_states"
                 android:layout_width="250dp"
                 android:layout_height="match_parent"
@@ -113,6 +113,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="7dp"
@@ -144,7 +145,6 @@
         </LinearLayout>
 
 
-
     </LinearLayout>
 
     <TextView
@@ -152,13 +152,14 @@
         android:layout_height="135dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:autoSizeTextType="uniform"
         android:background="@drawable/setting_button_round"
         android:lineSpacingMultiplier="1"
-        android:autoSizeTextType="uniform"
-        android:textSize="25sp"
-        android:textAlignment="center"
         android:text="فقط دو روزه دیگه مونده تا یه جون بگیری!"
+        android:textAlignment="center"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

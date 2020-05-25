@@ -3,10 +3,12 @@ package com.akaf.preway.adapter
 
 import android.app.AlertDialog
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.akaf.preway.R
 import kotlinx.android.synthetic.main.store_raw_items.view.*
@@ -51,25 +53,30 @@ class StoreAdapter(val context: Context, var productList: List<Int>) :
                 }
             }
         }
-fun showDialog(context: Context){
-    val alertDialog = AlertDialog.Builder(context)
 
-    alertDialog.setView(R.layout.fragment_need_coin_dialog)
-    alertDialog.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
-        override fun onNothingSelected(parent: AdapterView<*>?) {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        fun showDialog(context: Context) {
+            val alertDialog = AlertDialog.Builder(context)
+
+            alertDialog.setView(R.layout.fragment_need_coin_dialog)
+            alertDialog.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                }
+
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?,
+                    position: Int,
+                    id: Long
+                ) {
+                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                }
+
+
+            })
+            alertDialog.show()
+
         }
-
-        override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-        }
-
-
-    })
-    alertDialog.show()
-
-}
-
 
 
     }

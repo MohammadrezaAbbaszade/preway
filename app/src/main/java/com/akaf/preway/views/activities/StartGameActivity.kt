@@ -49,7 +49,7 @@ class StartGameActivity : AppCompatActivity() {
     lateinit var afd: AssetFileDescriptor
 lateinit var view: Button
     lateinit var mediaPlayer: MediaPlayer
-    lateinit var mediaPlayer2: MediaPlayer
+     var mediaPlayer2: MediaPlayer?=null
     companion object {
         private val CHECK_LIVESHOW= "checkliveshow"
         fun newIntent(context: Context, checkLiveShow:Boolean): Intent {
@@ -195,7 +195,7 @@ lateinit var view: Button
     private fun timesUp() {
         Log.e("seeTheStarts", "timesUp")
         Log.e("checkMedi", "timesUp")
-        mediaPlayer2.release()
+        mediaPlayer2?.release()
 
         offairCountdownContainer.visibility = View.INVISIBLE
         offairCountdownTextView.text = ""
@@ -275,7 +275,7 @@ lateinit var view: Button
             disableAnswerButtons()
 
         }else {
-            mediaPlayer2.release()
+            mediaPlayer2?.release()
             timer.cancel()
             time = 1
             questionCounter++
@@ -409,7 +409,7 @@ lateinit var view: Button
 
         beatBox.release(mediaPlayer)
         if (mediaPlayer2 != null) {
-            beatBox.release(mediaPlayer2)
+            beatBox.release(mediaPlayer2!!)
         }
     }
 
@@ -524,7 +524,7 @@ lateinit var view: Button
 
         for (item in beatBox.soundsList) {
             if (item.soundName.equals(soundName))
-                beatBox.play(item, mediaPlayer2, looping)
+                beatBox.play(item, mediaPlayer2!!, looping)
         }
 
     }

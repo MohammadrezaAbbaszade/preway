@@ -1,121 +1,176 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:id="@+id/announcementCardView"
-
     android:layout_width="fill_parent"
+
     android:layout_height="240dp"
-    android:layout_marginTop="@dimen/grid_1"
-    android:layout_marginBottom="@dimen/grid_1"
     android:layout_marginStart="@dimen/grid_2"
+    android:layout_marginTop="@dimen/grid_1"
     android:layout_marginEnd="@dimen/grid_2"
+    android:layout_marginBottom="@dimen/grid_1"
     android:elevation="0.5dip"
+    android:orientation="vertical"
     app:cardCornerRadius="12.0dip">
+
     <LinearLayout
         android:layout_width="fill_parent"
-        android:orientation="vertical"
+        android:layout_height="fill_parent"
 
-        android:layout_height="fill_parent">
+        android:orientation="vertical">
 
         <TextView
-           android:layout_weight="1"
             android:id="@+id/store_raw_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Extra Lives"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-        android:textSize="14sp"
-        android:layout_marginTop="10dp"
-        />
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="Extra Lives"
+            android:textSize="14sp" />
+
         <TextView
-         android:layout_weight="1"
             android:id="@+id/store_raw_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
             android:text="This the sample Description"
-            android:textSize="14sp"
-           android:layout_gravity="center"/>
+            android:textSize="14sp" />
 
         <FrameLayout
 
-            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-           >
+            android:layout_weight="1">
+
             <LinearLayout
-android:id="@+id/store_items_second"
+                android:id="@+id/store_items_second"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_gravity="center|top"
 
-                android:layout_gravity="center|top">
+                android:orientation="vertical">
 
-                <ImageView
+                <FrameLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_round_shape"
-                    android:src="@drawable/ic_superspin_small"/>
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/store_row_img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/button_round_shape"
+                        android:src="@drawable/ic_superspin_small" />
+
+                    <TextView
+                        android:id="@+id/store_row_count1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="10"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                </FrameLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
                     android:layout_marginTop="1dp"
+                    android:background="@drawable/butto_round_shape_2"
                     android:text="2000"
                     android:textAlignment="center"
-                    android:background="@drawable/butto_round_shape_2" />
+                    android:textColor="@color/white" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/store_items_first"
-                android:layout_marginLeft="12dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_gravity="left|top"
-                >
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical">
 
-                <ImageView
+                <FrameLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_round_shape"
-                    android:src="@drawable/ic_superspin_small"/>
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/store_row_img2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/button_round_shape"
+                        android:src="@drawable/ic_superspin_small"
+                         />
+
+                    <TextView
+                        android:id="@+id/store_row_count2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="10"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                </FrameLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
                     android:layout_marginTop="1dp"
+                    android:background="@drawable/butto_round_shape_2"
                     android:text="2000"
                     android:textAlignment="center"
-                    android:background="@drawable/butto_round_shape_2" />
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/store_items_third"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="12dp"
                 android:layout_gravity="right|top"
-                >
+                android:layout_marginRight="12dp"
+                android:orientation="vertical">
 
-                <ImageView
+                <FrameLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_round_shape"
-                    android:src="@drawable/ic_superspin_small"/>
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/store_row_img3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/button_round_shape"
+                        android:src="@drawable/ic_superspin_small"
+                         />
+
+                    <TextView
+                        android:id="@+id/store_row_count3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="10"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                </FrameLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
                     android:layout_marginTop="1dp"
+                    android:background="@drawable/butto_round_shape_2"
                     android:text="2000"
                     android:textAlignment="center"
-                    android:background="@drawable/butto_round_shape_2" />
+                    android:textColor="@color/white" />
             </LinearLayout>
 
         </FrameLayout>

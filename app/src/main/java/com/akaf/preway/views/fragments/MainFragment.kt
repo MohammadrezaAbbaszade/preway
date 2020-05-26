@@ -15,7 +15,6 @@ import com.akaf.preway.views.activities.HelpActivity
 import com.akaf.preway.R
 import com.akaf.preway.views.activities.StartGameActivity
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import kotlinx.android.synthetic.main.footer_item.view.*
 import kotlinx.android.synthetic.main.fragment_main.view.*
 import kotlinx.android.synthetic.main.hq_layout.view.*
 
@@ -42,26 +41,26 @@ class MainFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_main, container, false)
         val recyclerViewImages = ArrayList<Int>()
         recyclerViewImages.add(1)
-        initRecyclerView(recyclerViewImages, view)
+//        initRecyclerView(recyclerViewImages, view)
 
-        view.getHelpButton.setOnClickListener {
-            val intent = HelpActivity.newIntent(context!!)
-            startActivity(intent)
-        }
-        view.legalButton.setOnClickListener {
-            val dialogView =
-                getLayoutInflater().inflate(R.layout.fragment_bottom_sheet_dialog, null)
-            val dialog = BottomSheetDialog(context!!)
-            dialog.setContentView(dialogView)
-            dialog.show()
-
-        }
-
-
-        view.reviewUsButton.setOnClickListener {
-
-            showDialog(context!!)
-        }
+//        view.getHelpButton.setOnClickListener {
+//            val intent = HelpActivity.newIntent(context!!)
+//            startActivity(intent)
+//        }
+//        view.legalButton.setOnClickListener {
+//            val dialogView =
+//                getLayoutInflater().inflate(R.layout.fragment_bottom_sheet_dialog, null)
+//            val dialog = BottomSheetDialog(context!!)
+//            dialog.setContentView(dialogView)
+//            dialog.show()
+//
+//        }
+//
+//
+//        view.reviewUsButton.setOnClickListener {
+//
+//            showDialog(context!!)
+//        }
 
         view.challengeButton.setOnClickListener {
 
@@ -78,12 +77,12 @@ class MainFragment : Fragment() {
         return view
     }
 
-    private fun initRecyclerView(images: List<Int>, view: View) {
-        recyclerView =
-            Adapter(context!!, images)
-        view.main_hq_recycler.adapter = recyclerView
-
-    }
+//    private fun initRecyclerView(images: List<Int>, view: View) {
+//        recyclerView =
+//            Adapter(context!!, images)
+//        view.main_hq_recycler.adapter = recyclerView
+//
+//    }
 
 
     private fun showDialog(context: Context) {

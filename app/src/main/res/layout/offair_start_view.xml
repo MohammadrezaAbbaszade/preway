@@ -20,6 +20,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         style="@style/ButtonRound" />
+    <Button
+        android:textColor="@color/hq_blue"
+        android:id="@+id/startButton2"
+android:text="تست صفحه نتیجه"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/grid_8"
+        android:minWidth="@dimen/grid_16"
+        android:backgroundTint="@color/hq_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/ButtonRound" />
     <androidx.appcompat.widget.AppCompatTextView
         android:textSize="@dimen/body"
         android:textColor="@color/white"

@@ -1,173 +1,128 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_daly_main_background"
     android:orientation="vertical">
 
     <include
 
         android:id="@+id/include"
-        layout="@layout/setting_header"
-         />
+        layout="@layout/setting_header" />
 
-    <include
-        layout="@layout/setting_header_profile"
-        />
+    <include layout="@layout/setting_header_profile" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/setting_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="horizontal"/>
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:textSize="20.0sp"
-        android:textColor="@color/white"
-        android:ellipsize="end"
-        android:gravity="center"
-
-        android:layout_gravity="center"
-        android:text="کد معرف: Mohammadreza"
-        android:id="@+id/shareCodeButton"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:layout_marginBottom="@dimen/grid_1"
-        android:lines="1"
-        android:fontFamily="@font/circularstdbold"
-        android:backgroundTint="@color/hq_red"
-        app:autoSizeMaxTextSize="20.0sp"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/settingsUsername"
-        style="@style/ButtonRound" />
-
-
-    <LinearLayout
         android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="45dp">
 
-        android:layout_height="wrap_content">
-        <androidx.appcompat.widget.SwitchCompat
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/shareCodeButton"
+            style="@style/ButtonRound"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:layout_marginBottom="@dimen/grid_1"
+            android:background="@drawable/ic_round_button_svg"
+
+            android:ellipsize="end"
+            android:fontFamily="@font/circularstdbold"
+            android:lines="1"
+            android:text="adsar21478"
+            android:textAlignment="textStart"
+            android:textColor="#CDC4C4"
+            android:textSize="20.0sp"
+            app:autoSizeMaxTextSize="20.0sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/hq_blue"
+            android:text="کد معرف"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.551" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="دریافت اعلان"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/setting_cashout"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="درخواست تسویه"
-            android:background="@drawable/button_round_yellow"
             android:layout_marginStart="60dp"
-            android:textStyle="bold"
-            />
+            android:backgroundTint="#6b6ed7"
+            android:text="درخواست تسویه"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_marginBottom="12dp"
             android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
             android:text="2 روز دیگه مونده تا جون بگیری!"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:textStyle="bold" />
 
-            <ProgressBar
-                android:id="@+id/setting_progress_bar_day_count"
-                android:progressDrawable="@drawable/days_counter_states"
-                android:layout_width="250dp"
-                android:layout_height="match_parent"
-                android:indeterminate="false"
-                android:progress="50"
-                android:max="100"
-                android:secondaryProgress="100"
-                style="?android:attr/progressBarStyleHorizontal" />
-
-
-    </LinearLayout>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="7dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:drawableStart="@drawable/ic_coin"
-                android:drawablePadding="15dp"
-                android:text="پروفایلتو تکمیل کن جایزه بگیر" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_gift"
-                android:drawablePadding="12dp"
-                android:text="تبلیغات ببین! جایزه بگیر!" />
-
-        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/setting_progress_bar_day_count"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/days_counter_states"
+            android:secondaryProgress="100" />
 
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="145dp"
-        android:layout_height="135dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:autoSizeTextType="uniform"
-        android:background="@drawable/setting_button_round"
-        android:lineSpacingMultiplier="1"
-        android:text="فقط دو روزه دیگه مونده تا یه جون بگیری!"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
 
 

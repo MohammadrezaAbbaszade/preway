@@ -106,7 +106,7 @@
             style="@style/BodyPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="تاریخ رو انتخاب کن:"
+            android:text="تاریخ تولد:"
             android:layout_marginTop="5dp"
             android:textStyle="bold"
             android:textSize="26sp"

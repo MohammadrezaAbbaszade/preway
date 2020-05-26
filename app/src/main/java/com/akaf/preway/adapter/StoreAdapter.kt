@@ -25,7 +25,7 @@ class StoreAdapter(val context: Context, var productList: List<Int>) :
     }
 
     override fun getItemCount(): Int {
-        return 3
+        return 2
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -39,18 +39,12 @@ class StoreAdapter(val context: Context, var productList: List<Int>) :
         fun bind(image: Int) {
 
             with(view) {
-
-                store_items_first.setOnClickListener {
-                    showDialog(context)
+                if(image==1) {
+                    store_item_img1.background=context.resources.getDrawable(R.drawable.ic_single_coins)
+                    store_item_img2.background=context.resources.getDrawable(R.drawable.ic_single_coins)
+                    store_item_img3.background=context.resources.getDrawable(R.drawable.ic_single_coins)
                 }
 
-                store_items_second.setOnClickListener {
-                    showDialog(context)
-                }
-
-                store_items_third.setOnClickListener {
-                    showDialog(context)
-                }
             }
         }
 

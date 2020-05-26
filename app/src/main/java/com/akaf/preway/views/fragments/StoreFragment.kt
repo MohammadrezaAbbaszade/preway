@@ -35,20 +35,20 @@ class StoreFragment : Fragment() {
         val view= inflater.inflate(R.layout.fragment_store, container, false)
         val recyclerViewImages = ArrayList<Int>()
         recyclerViewImages.add(1)
-        initRecyclerView(recyclerViewImages,view)
+//        initRecyclerView(recyclerViewImages,view)
 
-        view.webStoreButton.setOnClickListener {
-            val intent = WebStoreActivity.newIntent(context!!)
-            startActivity(intent)
-        }
+//        view.webStoreButton.setOnClickListener {
+//            val intent = WebStoreActivity.newIntent(context!!)
+//            startActivity(intent)
+//        }
 
         return view
     }
-    private fun initRecyclerView(images: List<Int>,view:View) {
-        recyclerView =
-            StoreAdapter(context!!, images)
-        view.store_fragment_recycler.adapter = recyclerView
-
-    }
+//    private fun initRecyclerView(images: List<Int>,view:View) {
+//        recyclerView =
+//            StoreAdapter(context!!, images)
+//        view.store_fragment_recycler.adapter = recyclerView
+//
+//    }
 
 }

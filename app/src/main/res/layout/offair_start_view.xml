@@ -1,196 +1,209 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:id="@+id/startView"
-    android:visibility="visible"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:visibility="visible">
+
     <Button
-        android:textColor="@color/hq_blue"
         android:id="@+id/startButton"
+        style="@style/ButtonRound"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/grid_8"
-        android:minWidth="@dimen/grid_16"
         android:backgroundTint="@color/hq_yellow"
+        android:minWidth="@dimen/grid_16"
+        android:textColor="@color/hq_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        style="@style/ButtonRound" />
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
-        android:textColor="@color/hq_blue"
         android:id="@+id/startButton2"
-android:text="تست صفحه نتیجه"
-        android:visibility="invisible"
+        style="@style/ButtonRound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/grid_8"
-        android:minWidth="@dimen/grid_16"
         android:backgroundTint="@color/hq_yellow"
+        android:minWidth="@dimen/grid_16"
+        android:text="تست صفحه نتیجه"
+        android:textColor="@color/hq_blue"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        style="@style/ButtonRound" />
+        app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.appcompat.widget.AppCompatTextView
-        android:textSize="@dimen/body"
-        android:textColor="@color/white"
-        android:gravity="center"
         android:id="@+id/answerTriviaQuestionsTextView"
         android:layout_width="0.0dip"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/grid_2"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/body"
         app:autoSizeMaxTextSize="@dimen/body"
         app:autoSizeMinTextSize="@dimen/caption_2"
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="@+id/dailyChallengeTextView"
         app:layout_constraintStart_toStartOf="@+id/dailyChallengeTextView"
         app:layout_constraintTop_toBottomOf="@+id/offairStartViewCenterGuideline" />
+
     <TextView
-        android:textSize="46.0sp"
-        android:textColor="@color/white"
-        android:gravity="center"
         android:id="@+id/dailyChallengeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/grid_2"
+        android:gravity="center"
         android:text="@string/Daily_nChallenge"
+        android:textColor="@color/white"
+        android:textSize="46.0sp"
         app:layout_constraintBottom_toTopOf="@+id/offairStartViewCenterGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.constraintlayout.widget.Guideline
-        android:orientation="horizontal"
         android:id="@+id/offairStartViewCenterGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
 
     <LinearLayout
-        android:id="@+id/answer_options"
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
+        android:id="@+id/start_game_powerup_buttons"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="14dp"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/grid_8"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal">
         <LinearLayout
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button_round_yellow"
             android:orientation="vertical">
 
-            <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/remove_Answer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/ic_delete"
-                fab:fab_label="Add Task"
-                fab:fab_size="mini" />
-
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="حذف گزینه"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
-            android:orientation="vertical">
-
-            <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/askpeople"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/ic_people_black_24dp"
-                fab:fab_label="Add Task"
-                fab:fab_size="mini" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="جواب مردم"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/again_chance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/ic_again_chance"
-                fab:fab_label="Add Task"
-                fab:fab_size="mini" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="99dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/ic_group_reclick"
                 android:text="شانس مجدد"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
+                android:textAlignment="center"
+                android:textColor="#36399a"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/button_round_yellow"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="99dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/ic_group_remove"
+                android:text="حذف دوگزینه"
+                android:textAlignment="center"
+                android:textColor="#36399a"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="99dp"
+            android:layout_height="60.8dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_round_yellow"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="99dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/ic_group_users"
+                android:text="جواب مردم"
+                android:textAlignment="center"
+                android:textColor="#36399a"
+                android:textSize="18sp" />
+
+
         </LinearLayout>
 
     </LinearLayout>
+
+
     <LinearLayout
         android:id="@+id/powerups_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-    android:visibility="invisible"
         android:layout_marginBottom="@dimen/grid_8"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="horizontal">
-        <Button
-            android:textColor="@color/hq_blue"
-            android:id="@+id/power_ups_people"
+
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginEnd="5dp"
             android:layout_height="wrap_content"
-            android:minWidth="@dimen/grid_16"
-            android:text="جون بیشتر"
-            android:drawableStart="@drawable/ic_heart_round_background_filled"
-            android:backgroundTint="@color/hq_yellow"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            style="@style/ButtonRound" />
-    <Button
-        android:textColor="@color/hq_blue"
-        android:id="@+id/power_ups_delete"
-        android:enabled="false"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="@dimen/grid_16"
-        android:layout_weight="1"
-        android:text="پاک کن"
-        android:drawableStart="@drawable/ic_eraser"
-        android:layout_marginEnd="5dp"
-        android:drawablePadding="5dp"
-        android:backgroundTint="@color/hq_yellow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        style="@style/ButtonRound" />
+
+            android:background="@drawable/button_round_yellow"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="99dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:drawableTop="@drawable/ic_group_heart2"
+                android:text="جون اضافی"
+                android:textAlignment="center"
+                android:textColor="#36399a"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="99dp"
+            android:layout_height="60.8dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_round_yellow"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/power_ups_delete"
+                android:layout_width="99dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/ic_group_eraser"
+                android:text="پاک کن"
+                android:textAlignment="center"
+                android:textColor="#36399a"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

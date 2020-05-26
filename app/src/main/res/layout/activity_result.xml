@@ -297,18 +297,16 @@
                     android:textColor="@color/white" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|top"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="53dp"
+                    android:layout_height="69dp"
+                    android:layout_gravity="center"
                     android:orientation="vertical">
 
-                    <TextView
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:drawablePadding="5dp"
-                        android:text="x2"
+                        android:src="@drawable/ic_group_2x2"
                         android:textColor="@color/white"
                         android:textSize="35sp"
                         android:textStyle="bold" />
@@ -345,18 +343,16 @@
                     android:textColor="@color/white" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|top"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="53dp"
+                    android:layout_height="69dp"
+                    android:layout_gravity="center"
                     android:orientation="vertical">
 
-                    <TextView
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:drawablePadding="5dp"
-                        android:text="x2"
+                        android:src="@drawable/ic_group_3x"
                         android:textColor="@color/white"
                         android:textSize="35sp"
                         android:textStyle="bold" />
@@ -393,18 +389,16 @@
                     android:textColor="@color/white" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|top"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="53dp"
+                    android:layout_height="69dp"
+                    android:layout_gravity="center"
                     android:orientation="vertical">
 
-                    <TextView
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:drawablePadding="5dp"
-                        android:text="x2"
+                        android:src="@drawable/ic_group_5x"
                         android:textColor="@color/white"
                         android:textSize="35sp"
                         android:textStyle="bold" />

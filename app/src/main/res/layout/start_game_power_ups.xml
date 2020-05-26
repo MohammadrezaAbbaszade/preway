@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/button_round_yellow"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="99dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ic_group_reclick"
+            android:text="شانس مجدد"
+            android:textAlignment="center"
+            android:textColor="#36399a"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/button_round_yellow"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="99dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ic_group_remove"
+            android:text="حذف دوگزینه"
+            android:textAlignment="center"
+            android:textColor="#36399a"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="99dp"
+        android:layout_height="60.8dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/button_round_yellow"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="99dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ic_group_users"
+            android:text="جواب مردم"
+            android:textAlignment="center"
+            android:textColor="#36399a"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+</LinearLayout>

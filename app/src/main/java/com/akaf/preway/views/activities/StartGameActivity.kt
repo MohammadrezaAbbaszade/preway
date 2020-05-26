@@ -142,7 +142,7 @@ lateinit var view: Button
         if(isLiveShow){
             powerups_buttons.visibility=View.VISIBLE
         }else {
-            answer_options.visibility = View.VISIBLE
+            start_game_powerup_buttons.visibility = View.VISIBLE
         }
 
         var questionCounter = SharePreferenceData.getQuestionCounter(

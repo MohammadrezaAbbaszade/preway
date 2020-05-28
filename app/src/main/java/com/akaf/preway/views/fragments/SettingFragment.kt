@@ -44,7 +44,7 @@ class SettingFragment : Fragment() {
 
         val recyclerViewImages = ArrayList<Int>()
         recyclerViewImages.add(1)
-        initRecyclerView(recyclerViewImages, view)
+//        initRecyclerView(recyclerViewImages, view)
 view.setting_profile_progress.setOnClickListener {
     val intent = EditProfileActivity.newIntent(context!!)
     startActivity(intent)
@@ -58,10 +58,10 @@ view.setting_profile_progress.setOnClickListener {
         return view
     }
 
-    private fun initRecyclerView(images: List<Int>, view: View) {
-        recyclerView =
-            SettingAdapter(context!!, images)
-        view.setting_recycler.adapter = recyclerView
-
-    }
+//    private fun initRecyclerView(images: List<Int>, view: View) {
+//        recyclerView =
+//            SettingAdapter(context!!, images)
+//        view.setting_recycler.adapter = recyclerView
+//
+//    }
 }

@@ -10,41 +10,61 @@
     android:fitsSystemWindows="true"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <TextView
-        android:textSize="@dimen/headline"
-        android:textColor="@color/white"
-        android:id="@+id/resultsTitleView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/grid_1"
-        android:text="نتیجه پنج بازی"
-        android:fontFamily="@font/circularstdbold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/coinView"
-        android:layout_width="@dimen/grid_3_half"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/grid_3"
-        app:layout_constraintBottom_toBottomOf="@+id/resultsTitleView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/resultsTitleView"
-        app:srcCompat="@drawable/ic_small_single_coin" />
-    <TextView
-        android:textSize="@dimen/tyc_txt_size"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:gravity="center_vertical"
-        android:id="@id/coinBalanceView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="12"
-        android:paddingStart="@dimen/grid_1"
-        android:paddingEnd="@dimen/grid_1"
-        app:layout_constraintBottom_toBottomOf="@+id/coinView"
-        app:layout_constraintStart_toEndOf="@+id/coinView"
-        app:layout_constraintTop_toTopOf="@+id/coinView" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/resultsTitleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/circularstdbold"
+            android:text="نتیجه پنج بازی"
+            android:textColor="@color/white"
+            android:textSize="@dimen/headline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.639"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/result_back_arrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_back_arrow"
+            app:layout_constraintEnd_toStartOf="@+id/resultsTitleView"
+            app:layout_constraintHorizontal_bias="0.510"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/coinBalanceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_small_single_coin"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/grid_1"
+            android:paddingEnd="@dimen/grid_1"
+            android:text="12"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tyc_txt_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/resultsTitleView"
+            app:layout_constraintHorizontal_bias="0.689"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_back_arrow"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
     <LinearLayout
@@ -430,6 +450,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="تبریییییییک"
+
                     android:textColor="@color/white"
                     android:textSize="25sp"
                     android:textStyle="bold" />

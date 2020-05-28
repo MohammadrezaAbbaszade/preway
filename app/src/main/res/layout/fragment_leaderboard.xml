@@ -7,7 +7,62 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="3dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/leaderboard_leader_view"
+            android:background="@color/transparent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/view_divider_horizontal_0_5" />
+            <RelativeLayout
+                android:paddingTop="@dimen/grid_1"
+                android:paddingBottom="@dimen/grid_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/grid_3"
+                android:paddingEnd="@dimen/grid_2">
+                <TextView android:textColor="@color/mid_grey"
+                    android:id="@+id/leaderboard_rank_text_view"
+                    android:layout_width="60dp"
+                    android:text="رتبه :110"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/circularstdbook"
+                    android:layout_marginEnd="@dimen/grid_1" />
 
+                <TextView
+                    android:id="@+id/leaderboard_username_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="55dp"
+                    android:layout_toStartOf="@+id/leaderboard_balance_text_view"
+                    android:layout_toEndOf="@id/leaderboard_rank_text_view"
+                    android:fontFamily="@font/circularstdmedium"
+                    android:textAlignment="center"
+                    android:text="Mohammadreza"
+                    android:layout_marginStart="18dp"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/leaderboard_balance_text_view"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="100"
+                    android:drawablePadding="8dp"
+                    android:drawableEnd="@drawable/ic_small_single_coin"
+                    style="@style/TextViewBalanceRounded" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
     <include layout="@layout/leader_top_three_view" />
     <LinearLayout
         android:layout_width="wrap_content"
@@ -17,16 +72,49 @@
         android:orientation="horizontal">
 
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/leaderboard_date"
-            style="@style/BodyPrimary"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="1399/05/24"
-            android:textSize="20sp"
-            app:autoSizeMaxTextSize="@dimen/subheadline"
-            app:autoSizeTextType="uniform"
-            />
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:background="@drawable/button_round_white"
+                android:hint="سال"
+                android:inputType="number"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/" />
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:background="@drawable/button_round_white"
+                android:hint="ماه"
+                android:inputType="number"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/" />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:background="@drawable/button_round_white"
+                android:hint="روز"
+                android:inputType="number"
+                android:textAlignment="center" />
+
+        </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/BodyPrimary"
@@ -34,6 +122,7 @@
             android:layout_height="wrap_content"
             android:text="تاریخ رو انتخاب کن:"
             android:layout_marginTop="5dp"
+            android:fontFamily="@font/iranyekanwebregular"
             android:textStyle="bold"
             android:textSize="26sp"
             app:autoSizeMaxTextSize="@dimen/subheadline"
@@ -50,64 +139,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="3dp">
-    <LinearLayout
-        android:orientation="vertical"
-        android:id="@+id/leaderboard_leader_view"
-        android:background="@color/transparent"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <include
-            layout="@layout/view_divider_horizontal_0_5" />
-        <RelativeLayout
-            android:paddingTop="@dimen/grid_1"
-            android:paddingBottom="@dimen/grid_1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="@dimen/grid_3"
-            android:paddingEnd="@dimen/grid_2">
-            <TextView android:textColor="@color/mid_grey"
-                android:id="@+id/leaderboard_rank_text_view"
-                android:layout_width="@dimen/grid_4"
-                android:text="110"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/circularstdbook"
-                android:layout_marginEnd="@dimen/grid_1" />
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/leaderboard_avatar_image_view"
-                android:background="@drawable/default_avatar"
-                android:layout_width="@dimen/grid_4"
-                android:layout_height="@dimen/grid_4"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="@dimen/grid_2"
-                android:layout_toEndOf="@id/leaderboard_rank_text_view" />
-            <TextView
-                android:textSize="16.0sp"
-                android:textColor="@color/text_primary"
-                android:id="@+id/leaderboard_username_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mohammadreza"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/circularstdmedium"
-                android:layout_marginEnd="@dimen/grid_2"
-                android:layout_toStartOf="@+id/leaderboard_balance_text_view"
-                android:layout_toEndOf="@id/leaderboard_avatar_image_view" />
-            <TextView
-                android:id="@+id/leaderboard_balance_text_view"
-                android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
-                android:text="100$"
-                style="@style/TextViewBalanceRounded" />
-        </RelativeLayout>
 
-
-    </LinearLayout>
-    </androidx.cardview.widget.CardView>
     </LinearLayout>
 
 

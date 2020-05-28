@@ -12,9 +12,9 @@
         android:background="@drawable/button_shape"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:text="@string/This_week"
+        android:text="این هفته"
         android:layout_weight="1.0"
-        android:fontFamily="@font/circularstdmedium"
+        android:fontFamily="@font/iranyekanwebregular"
         android:layout_marginEnd="@dimen/grid_1_half"
         style="@style/ButtonRound" />
     <Button
@@ -23,9 +23,11 @@
         android:background="@drawable/button_leaderboard_mode"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/All_time"
+        android:text="کل"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:fontFamily="@font/iranyekanwebregular"
         android:layout_weight="1.0"
-        android:fontFamily="@font/circularstdmedium"
         android:layout_marginStart="@dimen/grid_1_half"
         style="@style/ButtonRound" />
 

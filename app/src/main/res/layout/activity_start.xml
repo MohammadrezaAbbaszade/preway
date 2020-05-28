@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/ic_main_logo" />
     <TextView
         android:textSize="24.0sp"
         android:textColor="@color/white"
@@ -38,7 +38,7 @@
         android:id="@+id/live_trivia"
         android:layout_width="0.0dip"
         android:layout_height="wrap_content"
-        android:text="@string/Live_Game_Shows"
+        android:text="preway"
         android:fontFamily="@font/circularstdmedium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

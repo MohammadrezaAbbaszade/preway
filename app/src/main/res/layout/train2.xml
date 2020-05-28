@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <LinearLayout
+            android:layout_marginEnd="10dp"
+            android:layout_width="146dp"
+            android:layout_height="137dp"
+            android:orientation="vertical"
+            android:background="@drawable/button_round_light_blue2">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/ic_sheypoor"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="تبلیغات ببین!"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:fontFamily="@font/iranyekanwebregular"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جایزه ببر!"
+                android:fontFamily="@font/iranyekanwebregular"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <Button
+
+            android:layout_width="146dp"
+            android:layout_height="137dp"
+            android:drawableTop="@drawable/ic_give_your_gift"
+            android:background="@drawable/button_round_purple2"/>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

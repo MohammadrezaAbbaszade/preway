@@ -17,24 +17,12 @@
         android:backgroundTint="@color/hq_yellow"
         android:minWidth="@dimen/grid_16"
         android:textColor="@color/hq_blue"
+        android:fontFamily="@font/iranyekanwebregular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/startButton2"
-        style="@style/ButtonRound"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/grid_8"
-        android:backgroundTint="@color/hq_yellow"
-        android:minWidth="@dimen/grid_16"
-        android:text="تست صفحه نتیجه"
-        android:textColor="@color/hq_blue"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/answerTriviaQuestionsTextView"
@@ -60,6 +48,7 @@
         android:text="@string/Daily_nChallenge"
         android:textColor="@color/white"
         android:textSize="46.0sp"
+        android:fontFamily="@font/iranyekanwebregular"
         app:layout_constraintBottom_toTopOf="@+id/offairStartViewCenterGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -78,7 +67,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginBottom="@dimen/grid_8"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,12 +81,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="99dp"
-                android:layout_height="60dp"
+                android:layout_width="110dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:drawablePadding="8dp"
                 android:drawableTop="@drawable/ic_group_reclick"
                 android:text="شانس مجدد"
+                android:fontFamily="@font/iranyekanwebregular"
                 android:textAlignment="center"
                 android:textColor="#36399a"
                 android:textSize="18sp" />
@@ -119,6 +109,7 @@
                 android:drawablePadding="8dp"
                 android:drawableTop="@drawable/ic_group_remove"
                 android:text="حذف دوگزینه"
+                android:fontFamily="@font/iranyekanwebregular"
                 android:textAlignment="center"
                 android:textColor="#36399a"
                 android:textSize="18sp" />
@@ -134,10 +125,11 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="99dp"
-                android:layout_height="60dp"
+                android:layout_width="110dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:drawablePadding="8dp"
+                android:fontFamily="@font/iranyekanwebregular"
                 android:drawableTop="@drawable/ic_group_users"
                 android:text="جواب مردم"
                 android:textAlignment="center"
@@ -164,18 +156,19 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
 
             android:background="@drawable/button_round_yellow"
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="99dp"
-                android:layout_height="60dp"
+                android:layout_width="110dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:drawableTop="@drawable/ic_group_heart2"
                 android:text="جون اضافی"
+                android:fontFamily="@font/iranyekanwebregular"
                 android:textAlignment="center"
                 android:textColor="#36399a"
                 android:textSize="18sp" />
@@ -184,8 +177,8 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="99dp"
-            android:layout_height="60.8dp"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
             android:layout_marginStart="10dp"
             android:background="@drawable/button_round_yellow"
             android:orientation="vertical">
@@ -194,6 +187,7 @@
                 android:id="@+id/power_ups_delete"
                 android:layout_width="99dp"
                 android:layout_height="60dp"
+                android:fontFamily="@font/iranyekanwebregular"
                 android:layout_gravity="center"
                 android:drawablePadding="3dp"
                 android:drawableTop="@drawable/ic_group_eraser"

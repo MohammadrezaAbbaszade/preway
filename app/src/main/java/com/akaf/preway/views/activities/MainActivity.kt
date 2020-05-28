@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
             MainFragment.newInstance()
         )
             .commit()
-
         setMenuItemsListeners()
         bottomNavigationView.setSelectedItemId(R.id.page_lobby)
 
@@ -97,7 +96,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
-        }
+    }
 
 
 //    private fun setListeners() {

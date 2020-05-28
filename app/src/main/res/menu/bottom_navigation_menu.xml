@@ -13,7 +13,7 @@
         android:title="@string/HQ_Shop"
         app:showAsAction="ifRoom" />
     <item
-        android:icon="@drawable/ic_nav_lobby_selector"
+      android:icon="@drawable/ic_nav_lobby_selector"
         android:id="@+id/page_lobby"
         android:title="@string/Games"
         android:checked="true"

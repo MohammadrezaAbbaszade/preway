@@ -70,9 +70,7 @@ lateinit var view: Button
         } else {
             startButton.text = resources.getText(R.string.Continue)
         }
-        startButton2.setOnClickListener {
-            goToResultActivity()
-        }
+
         startButton.setOnClickListener {
             SharePreferenceData.setPlayerResult(
                 this,
@@ -138,7 +136,6 @@ lateinit var view: Button
         offairQuestionCounterView.visibility = View.GONE
         offairQuestionView.visibility = View.VISIBLE
         offairCountdownContainer.visibility = View.VISIBLE
-        startButton2.visibility=View.VISIBLE
         if(isLiveShow){
             powerups_buttons.visibility=View.VISIBLE
         }else {

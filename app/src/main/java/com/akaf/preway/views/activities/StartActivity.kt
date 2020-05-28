@@ -9,7 +9,7 @@ import com.akaf.preway.R
 import kotlinx.android.synthetic.main.activity_start.*
 
 
-class StartActivity : AppCompatActivity() {
+class StartActivity : BaseActivity() {
 
 
 

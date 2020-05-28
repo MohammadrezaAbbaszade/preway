@@ -25,7 +25,7 @@ import kotlinx.android.synthetic.main.offair_start_view.*
 import kotlinx.android.synthetic.main.offair_stats_animated_stars.*
 import kotlinx.android.synthetic.main.offair_stats_view.*
 
-class StartGameActivity : AppCompatActivity() {
+class StartGameActivity : BaseActivity() {
     val question by lazy {
         Question(this)
     }

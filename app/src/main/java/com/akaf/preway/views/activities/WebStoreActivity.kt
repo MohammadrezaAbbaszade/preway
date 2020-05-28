@@ -7,7 +7,7 @@ import android.os.Bundle
 import com.akaf.preway.R
 import kotlinx.android.synthetic.main.activity_web_store.*
 
-class WebStoreActivity : AppCompatActivity() {
+class WebStoreActivity : BaseActivity() {
 
 
     companion object {

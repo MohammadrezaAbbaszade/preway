@@ -10,7 +10,7 @@ import com.akaf.preway.MusicName
 import com.akaf.preway.R
 import kotlinx.android.synthetic.main.activity_result.*
 
-class ResultActivity : AppCompatActivity() {
+class ResultActivity : BaseActivity() {
 
     lateinit var beatBox: BeatBox
     lateinit var mediaPlayer: MediaPlayer

@@ -8,7 +8,7 @@ import android.widget.CompoundButton
 import com.akaf.preway.R
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
 
 
     companion object {

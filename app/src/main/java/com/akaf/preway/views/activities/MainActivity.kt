@@ -11,7 +11,7 @@ import com.akaf.preway.views.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.main_hq_footer_menu.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     val fm by lazy {
         supportFragmentManager

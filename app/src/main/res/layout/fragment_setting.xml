@@ -332,7 +332,7 @@ android:layout_gravity="center"
                 android:text="تبلیغات ببین!"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:fontFamily="@font/iranyekanwebregular"
+
                 android:textColor="@color/white"
                 android:layout_gravity="center"/>
             <TextView
@@ -340,7 +340,7 @@ android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:text="جایزه ببر!"
                 android:textSize="15sp"
-                android:fontFamily="@font/iranyekanwebregular"
+
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_gravity="center"/>

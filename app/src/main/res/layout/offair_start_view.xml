@@ -17,7 +17,7 @@
         android:backgroundTint="@color/hq_yellow"
         android:minWidth="@dimen/grid_16"
         android:textColor="@color/hq_blue"
-        android:fontFamily="@font/iranyekanwebregular"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -48,7 +48,7 @@
         android:text="@string/Daily_nChallenge"
         android:textColor="@color/white"
         android:textSize="46.0sp"
-        android:fontFamily="@font/iranyekanwebregular"
+
         app:layout_constraintBottom_toTopOf="@+id/offairStartViewCenterGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -87,7 +87,7 @@
                 android:drawablePadding="8dp"
                 android:drawableTop="@drawable/ic_group_reclick"
                 android:text="شانس مجدد"
-                android:fontFamily="@font/iranyekanwebregular"
+
                 android:textAlignment="center"
                 android:textColor="#36399a"
                 android:textSize="18sp" />
@@ -109,7 +109,7 @@
                 android:drawablePadding="8dp"
                 android:drawableTop="@drawable/ic_group_remove"
                 android:text="حذف دوگزینه"
-                android:fontFamily="@font/iranyekanwebregular"
+
                 android:textAlignment="center"
                 android:textColor="#36399a"
                 android:textSize="18sp" />
@@ -129,7 +129,7 @@
                 android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:drawablePadding="8dp"
-                android:fontFamily="@font/iranyekanwebregular"
+
                 android:drawableTop="@drawable/ic_group_users"
                 android:text="جواب مردم"
                 android:textAlignment="center"
@@ -168,7 +168,7 @@
                 android:layout_gravity="center"
                 android:drawableTop="@drawable/ic_group_heart2"
                 android:text="جون اضافی"
-                android:fontFamily="@font/iranyekanwebregular"
+
                 android:textAlignment="center"
                 android:textColor="#36399a"
                 android:textSize="18sp" />
@@ -187,7 +187,7 @@
                 android:id="@+id/power_ups_delete"
                 android:layout_width="99dp"
                 android:layout_height="60dp"
-                android:fontFamily="@font/iranyekanwebregular"
+
                 android:layout_gravity="center"
                 android:drawablePadding="3dp"
                 android:drawableTop="@drawable/ic_group_eraser"

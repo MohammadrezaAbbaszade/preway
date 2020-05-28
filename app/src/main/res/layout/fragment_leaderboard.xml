@@ -122,7 +122,6 @@
             android:layout_height="wrap_content"
             android:text="تاریخ رو انتخاب کن:"
             android:layout_marginTop="5dp"
-            android:fontFamily="@font/iranyekanwebregular"
             android:textStyle="bold"
             android:textSize="26sp"
             app:autoSizeMaxTextSize="@dimen/subheadline"

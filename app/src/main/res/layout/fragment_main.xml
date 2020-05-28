@@ -41,7 +41,7 @@
            android:text="بازی زنده"
            android:textAlignment="center"
            android:textColor="#E8FF00"
-           android:fontFamily="@font/iranyekanwebregular"
+
            android:textSize="40sp"
            android:textStyle="bold"
            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
@@ -61,7 +61,6 @@
            android:textColor="#FFFFFF"
            android:textSize="25sp"
            android:textStyle="bold"
-           android:fontFamily="@font/iranyekanwebregular"
            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
            app:layout_constraintEnd_toEndOf="@+id/imageView2"
            app:layout_constraintHorizontal_bias="0.492"
@@ -79,7 +78,7 @@
            android:textSize="15sp"
            android:textStyle="bold"
            android:drawablePadding="12dp"
-           android:fontFamily="@font/iranyekanwebregular"
+
            android:drawableStart="@drawable/ic_share_black_24dp"
            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
            app:layout_constraintEnd_toEndOf="@+id/imageView2"

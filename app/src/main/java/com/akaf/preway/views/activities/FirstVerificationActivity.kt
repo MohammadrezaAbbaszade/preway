@@ -10,7 +10,7 @@ import android.view.animation.AnimationUtils
 import com.akaf.preway.R
 import kotlinx.android.synthetic.main.verification.*
 
-class FirstVerificationActivity : AppCompatActivity() {
+class FirstVerificationActivity : BaseActivity() {
 
 
     companion object {

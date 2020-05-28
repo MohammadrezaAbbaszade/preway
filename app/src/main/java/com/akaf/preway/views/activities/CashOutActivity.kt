@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.akaf.preway.R
 
-class CashOutActivity : AppCompatActivity() {
+class CashOutActivity : BaseActivity() {
 
 
     companion object {

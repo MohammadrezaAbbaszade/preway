@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.akaf.preway.R
 
-class HelpActivity : AppCompatActivity() {
+class HelpActivity : BaseActivity() {
 
 
     companion object {

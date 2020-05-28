@@ -31,7 +31,6 @@
                 android:paddingEnd="3dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/edittext_round_yellow2"
-                android:fontFamily="@font/iranyekanwebregular"
                 android:text="اعتبار شما : 20000 تومان"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
@@ -41,7 +40,6 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center|top"
                 android:background="@drawable/edittext_round_yellow1"
-                android:fontFamily="@font/iranyekanwebregular"
                 android:text="درخواست تسویه حساب"
                 android:textAlignment="center"
                 android:textColor="@color/black"
@@ -66,7 +64,6 @@
     android:layout_gravity="center"
     android:textAlignment="center"
     android:textStyle="bold"
-    android:fontFamily="@font/iranyekanwebregular"
     android:layout_marginTop="45dp"
     android:background="#EFE8E8"
     android:lineSpacingMultiplier="1"
@@ -82,7 +79,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/grid_5"
-        android:fontFamily="@font/iranyekanwebregular"
         android:layout_marginStart="@dimen/grid_4"
         android:layout_marginEnd="@dimen/grid_4" />
     <EditText android:textSize="@dimen/phone_verification_text"
@@ -108,7 +104,6 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:textAlignment="center"
-        android:fontFamily="@font/iranyekanwebregular"
         android:layout_marginTop="120dp"
         android:layout_gravity="center"
         android:text="ارسال درخواست"/>

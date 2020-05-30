@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/hq_blue"
 
     >
 
-<ImageView
-    android:id="@+id/verfication_background_image"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:scaleType="centerCrop"
-    android:src="@drawable/bg_pattern"/>
+    <ImageView
+        android:id="@+id/verfication_background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_pattern"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/verification_toolbar"
         android:layout_width="match_parent"
@@ -31,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginRight="230dp"
-                android:text="@string/login_tootlbar_title"
+                android:text="ثبت نام/ورود"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -53,68 +57,80 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/verification_country_name"
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/verification_country_name"-->
+<!--        android:layout_width="320dp"-->
+<!--        android:layout_height="56.0dip"-->
+<!--        android:background="@drawable/button_round_purple_border"-->
+<!--        android:layout_marginTop="72.0dp"-->
+<!--        android:layout_marginBottom="24.0dip"-->
+<!--        app:autoSizeMaxTextSize="18.0sp"-->
+<!--        app:autoSizeMinTextSize="14.0sp"-->
+<!--        app:autoSizeTextType="uniform"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.495"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/verification_toolbar"/>-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/verification_phone_number"
         android:layout_width="380dp"
-        android:layout_height="56.0dip"
-        android:background="@drawable/button_round_purple_border"
         android:layout_marginTop="72.0dp"
-        android:layout_marginBottom="24.0dip"
-        app:autoSizeMaxTextSize="18.0sp"
-        app:autoSizeMinTextSize="14.0sp"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/verification_toolbar"/>
-
-
-    <RelativeLayout android:id="@+id/verification_phone_number"
-        android:layout_width="380dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/verification_country_name"
+        app:layout_constraintTop_toBottomOf="@+id/verification_toolbar"
         >
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/verification_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="56.0dip"
-            android:background="@drawable/edit_text_radious"
-            android:layout_marginTop="25.0dp"
-            android:layout_marginBottom="24.0dip"
-            app:autoSizeMaxTextSize="18.0sp"
-            app:autoSizeMinTextSize="14.0sp"
-            app:autoSizeTextType="uniform"
-            android:textSize="18sp"
+        <EditText android:textSize="@dimen/phone_verification_text"
             android:textColor="@color/text_primary"
             android:textColorHint="@color/mid_grey"
-            android:hint="@string/Your_phone_number"
-            android:maxLines="1"
-            android:inputType="phone"
-            android:imeOptions="actionGo"
-            android:fontFamily="@font/circularstdbook"
-            android:paddingLeft="64.0dip"
-            android:paddingRight="16.0dip"
-            />
+            android:id="@+id/verification_edit_text"
+            android:background="@drawable/edit_text_radious"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/grid_7"
+            android:layout_marginTop="@dimen/grid_2"
+            android:hint="شماره تلفن را وارد کنید"
+            android:maxLines="1" android:inputType="phone|textNoSuggestions"
+            android:imeOptions="actionGo" android:paddingStart="@dimen/grid_3"
+            android:paddingEnd="@dimen/grid_3"
+            android:layout_marginStart="@dimen/grid_3"
+            android:layout_marginEnd="@dimen/grid_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
         <TextView
             android:id="@+id/verification_phone_input_country_code"
-            android:textSize="18.0sp"
-            android:textColor="@color/text_primary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/verification_edit_text"
+
+            android:layout_alignRight="@+id/verification_edit_text"
             android:layout_centerVertical="true"
-            android:text="+98"
             android:fontFamily="@font/circularstdbook"
-            android:layout_marginLeft="16dp" />
-    </RelativeLayout>
+            android:text="+98"
+            app:layout_constraintBottom_toBottomOf="@+id/verification_edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/verification_edit_text"
+            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintStart_toStartOf="@+id/verification_edit_text"
+            app:layout_constraintTop_toTopOf="@+id/verification_edit_text" />-->
+           android:textColor="@color/text_primary"
+           android:textSize="18.0sp"
+           app:layout_constraintBottom_toBottomOf="@+id/verification_edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/verification_edit_text"
+            app:layout_constraintHorizontal_bias="0.95"
+           app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/verification_edit_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/verification_submit_btn"
         android:layout_width="216dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/Next"
+        android:text="مرحله ی بعد"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_shape"

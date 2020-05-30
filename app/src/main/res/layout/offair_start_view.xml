@@ -17,7 +17,6 @@
         android:backgroundTint="@color/hq_yellow"
         android:minWidth="@dimen/grid_16"
         android:textColor="@color/hq_blue"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -45,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/grid_2"
         android:gravity="center"
-        android:text="@string/Daily_nChallenge"
+        android:text="چالش روزانه"
         android:textColor="@color/white"
         android:textSize="46.0sp"
 
@@ -67,7 +66,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginBottom="@dimen/grid_8"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,8 +102,8 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="99dp"
-                android:layout_height="60dp"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:drawablePadding="8dp"
                 android:drawableTop="@drawable/ic_group_remove"
@@ -118,8 +117,8 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="99dp"
-            android:layout_height="60.8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:background="@drawable/button_round_yellow"
             android:orientation="vertical">
@@ -156,7 +155,7 @@
 
 
         <LinearLayout
-            android:layout_width="110dp"
+            android:layout_width="120dp"
             android:layout_height="70dp"
 
             android:background="@drawable/button_round_yellow"
@@ -177,7 +176,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="110dp"
+            android:layout_width="120dp"
             android:layout_height="70dp"
             android:layout_marginStart="10dp"
             android:background="@drawable/button_round_yellow"
@@ -185,8 +184,8 @@
 
             <TextView
                 android:id="@+id/power_ups_delete"
-                android:layout_width="99dp"
-                android:layout_height="60dp"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
 
                 android:layout_gravity="center"
                 android:drawablePadding="3dp"

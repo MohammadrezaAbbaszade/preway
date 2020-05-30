@@ -47,28 +47,34 @@ class StartGameActivity : BaseActivity() {
     private var correctAnswerCount = 0
     private var incorrectAnswerCount = 0
     lateinit var afd: AssetFileDescriptor
-lateinit var view: Button
+    lateinit var view: Button
     lateinit var mediaPlayer: MediaPlayer
-     var mediaPlayer2: MediaPlayer?=null
+    var mediaPlayer2: MediaPlayer? = null
+
     companion object {
-        private val CHECK_LIVESHOW= "checkliveshow"
-        fun newIntent(context: Context, checkLiveShow:Boolean): Intent {
+        private val CHECK_LIVESHOW = "checkliveshow"
+        fun newIntent(context: Context, checkLiveShow: Boolean): Intent {
             val intent = Intent(context, StartGameActivity::class.java)
-            intent.putExtra(CHECK_LIVESHOW,checkLiveShow)
+            intent.putExtra(CHECK_LIVESHOW, checkLiveShow)
             return intent
         }
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start_game)
-        isLiveShow=intent.getBooleanExtra(CHECK_LIVESHOW,false)
+        isLiveShow = intent.getBooleanExtra(CHECK_LIVESHOW, false)
         play(MusicName.OFFAIR_MUSCI, true)
-
+        if (isLiveShow) {
+            dailyChallengeTextView.text = "لایو شو"
+        } else {
+            dailyChallengeTextView.text = "چالش روزانه"
+        }
 
         if (!SharePreferenceData.getPlayerResult(this)!!) {
-            startButton.text = resources.getText(R.string.play_now)
+            startButton.text = "بازی کن"
         } else {
-            startButton.text = resources.getText(R.string.Continue)
+            startButton.text = "ادامه"
         }
 
         startButton.setOnClickListener {
@@ -92,26 +98,26 @@ lateinit var view: Button
             }, 4000)
         }
         first_answer.setOnClickListener {
-            view=first_answer
+            view = first_answer
             answerClicked(first_answer)
         }
         second_answer.setOnClickListener {
-            view=second_answer
+            view = second_answer
             answerClicked(second_answer)
         }
 
         third_answer.setOnClickListener {
-            view=third_answer
+            view = third_answer
             answerClicked(third_answer)
         }
         fourth_answer.setOnClickListener {
-            view=fourth_answer
+            view = fourth_answer
             answerClicked(fourth_answer)
         }
         power_ups_delete.setOnClickListener {
 
             resetAnswers()
-            power_ups_delete.isEnabled=false
+            power_ups_delete.isEnabled = false
         }
 
     }
@@ -125,7 +131,7 @@ lateinit var view: Button
         offairQuestionCounterView.startAnimation(getAnimation(R.anim.fade_in))
         offairQuestionCounterView.visibility = View.VISIBLE
 
-        offairQuestionCounterValueView.text = "${questionCounter + 1}" + " " + "of 12"
+        offairQuestionCounterValueView.text = "${questionCounter + 1}" + " " + "از" + " " + "12"
 
     }
 
@@ -136,9 +142,9 @@ lateinit var view: Button
         offairQuestionCounterView.visibility = View.GONE
         offairQuestionView.visibility = View.VISIBLE
         offairCountdownContainer.visibility = View.VISIBLE
-        if(isLiveShow){
-            powerups_buttons.visibility=View.VISIBLE
-        }else {
+        if (isLiveShow) {
+            powerups_buttons.visibility = View.VISIBLE
+        } else {
             start_game_powerup_buttons.visibility = View.VISIBLE
         }
 
@@ -205,10 +211,10 @@ lateinit var view: Button
         offairCountdownProgressBar.progress = 0f
         disableAnswerButtons()
 
-        if(isLiveShow&&power_ups_delete.isEnabled){
-            power_ups_delete.isEnabled=false
+        if (isLiveShow && power_ups_delete.isEnabled) {
+            power_ups_delete.isEnabled = false
             checkAndSetBackGroundForAnswers(view)
-        }else {
+        } else {
 
             offairTimesUpPillView.visibility = View.VISIBLE
             handler.postDelayed(object : Runnable {
@@ -269,13 +275,12 @@ lateinit var view: Button
     public fun answerClicked(view: Button) {
         Log.e("checkMedi", "answerClicked")
         var drawable = resources.getDrawable(R.drawable.button_round)
-        if(isLiveShow)
-        {
-            view.background=drawable
-            power_ups_delete.isEnabled=true
+        if (isLiveShow) {
+            view.background = drawable
+            power_ups_delete.isEnabled = true
             disableAnswerButtons()
 
-        }else {
+        } else {
             mediaPlayer2?.release()
             timer.cancel()
             time = 1

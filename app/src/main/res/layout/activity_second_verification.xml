@@ -12,7 +12,7 @@
         android:textSize="16.0sp"
         android:textColor="@color/white"
         android:gravity="center"
-        android:text="Please Enter the verification code sent to"
+        android:text="لطفا کد فرستاده شده را وارد کنید"
         android:id="@+id/verification_message"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         android:layout_width="fill_parent"
         android:layout_height="@dimen/grid_7"
         android:layout_marginTop="@dimen/grid_2"
-        android:hint="@string/Enter_Verification_Code"
+        android:hint="کد تایید را وارد کنید"
         android:maxLines="1" android:inputType="phone|textNoSuggestions"
         android:imeOptions="actionGo" android:paddingStart="@dimen/grid_3"
         android:paddingEnd="@dimen/grid_3"
@@ -46,7 +46,7 @@
             android:background="@color/transparent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Resend_code"
+            android:text="ارسال مجدد"
             android:textAllCaps="false"
             android:fontFamily="@font/circularstdbook" />
         <View
@@ -80,7 +80,7 @@
             android:id="@+id/second_step_next_button"
             android:layout_width="@dimen/grid_27"
             android:layout_height="wrap_content"
-            android:text="@string/Next"
+            android:text="مرحله ی بعد"
 
             android:backgroundTint="@color/hq_red"
             style="@style/ButtonRound" />

@@ -46,14 +46,15 @@ class MainActivity : BaseActivity() {
                 when(item.itemId)
                 {
                     R.id.page_discover_people ->{
-                        Log.e("page_discover_people","page_discover_people")
-                        if (!DiscoverPeopleFragment.newInstance().isVisible) {
+                        if (!SettingFragment.newInstance().isVisible) {
                             fm.popBackStack()
-                            fm.beginTransaction().replace(
-                                R.id.fragment_container,
-                                DiscoverPeopleFragment.newInstance()
-                            ).commit()
+                            fm.beginTransaction()
+                                .replace(R.id.fragment_container,
+                                    SettingFragment.newInstance()
+                                )
+                                .commit()
                         }
+
                     }
                     R.id.page_store ->{
                         if (!StoreFragment.newInstance().isVisible) {
@@ -83,13 +84,13 @@ class MainActivity : BaseActivity() {
                         }
                     }
                     R.id.page_profile ->{
-                        if (!SettingFragment.newInstance().isVisible) {
+                        Log.e("page_discover_people","page_discover_people")
+                        if (!DiscoverPeopleFragment.newInstance().isVisible) {
                             fm.popBackStack()
-                            fm.beginTransaction()
-                                .replace(R.id.fragment_container,
-                                    SettingFragment.newInstance()
-                                )
-                                .commit()
+                            fm.beginTransaction().replace(
+                                R.id.fragment_container,
+                                DiscoverPeopleFragment.newInstance()
+                            ).commit()
                         }
                     }
                 }

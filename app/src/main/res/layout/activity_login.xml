@@ -12,12 +12,11 @@
         android:textSize="16.0sp"
         android:textColor="@color/white"
         android:gravity="center"
-        android:text="@string/Username"
+        android:text="لطفا نام کاربری را وارد کنید"
         android:id="@+id/login_username_txt"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/grid_5"
-        android:fontFamily="@font/circularstdbook"
         android:layout_marginStart="@dimen/grid_4"
         android:layout_marginEnd="@dimen/grid_4" />
     <EditText android:textSize="@dimen/phone_verification_text"
@@ -28,7 +27,7 @@
         android:layout_width="fill_parent"
         android:layout_height="@dimen/grid_7"
         android:layout_marginTop="@dimen/grid_2"
-        android:hint="@string/Enter_Username"
+        android:hint="نام کاربری را وارد کنید"
         android:maxLines="1" android:inputType="phone|textNoSuggestions"
         android:imeOptions="actionGo" android:paddingStart="@dimen/grid_3"
         android:paddingEnd="@dimen/grid_3"
@@ -38,7 +37,7 @@
         android:textSize="16.0sp"
         android:textColor="@color/white"
         android:gravity="center"
-        android:text="@string/Enter_Referral_Code"
+        android:text="لطفا کد معرف را وارد کنید"
         android:id="@+id/login_referal_txt"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -54,7 +53,7 @@
         android:layout_width="fill_parent"
         android:layout_height="@dimen/grid_7"
         android:layout_marginTop="@dimen/grid_2"
-        android:hint="@string/Referral_Codes"
+        android:hint="کد تایید"
         android:maxLines="1" android:inputType="phone|textNoSuggestions"
         android:imeOptions="actionGo" android:paddingStart="@dimen/grid_3"
         android:paddingEnd="@dimen/grid_3"
@@ -73,7 +72,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="15sp"
-            android:text="I Agree With Policy"
+            android:text="من با قوانین موافقم"
            />
     </LinearLayout>
     <LinearLayout
@@ -87,7 +86,7 @@
             android:id="@+id/login_next_button"
             android:layout_width="@dimen/grid_27"
             android:layout_height="wrap_content"
-            android:text="@string/Next"
+            android:text="مرحله ی بعد"
             android:backgroundTint="@color/hq_red"
             style="@style/ButtonRound" />
         <ProgressBar

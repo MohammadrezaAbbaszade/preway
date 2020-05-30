@@ -54,7 +54,7 @@
         <Button
             android:id="@+id/getStartedButton"
             android:layout_width="fill_parent"
-            android:text="@string/Get_Started"
+            android:text="شروع کن"
             android:layout_marginStart="@dimen/grid_4"
             android:layout_marginEnd="@dimen/grid_4"
             android:backgroundTint="@color/hq_red"
@@ -80,40 +80,33 @@
             android:id="@+id/tyc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/By_signing_up_you_agree_to_the"
-            android:alpha="0.6" />
+            android:text="شما با ثبت نام، با حریم خصوصی  و قوانین"
+            />
         <LinearLayout
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingBottom="@dimen/grid_3"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
-            <TextView
-                android:textSize="12.0sp"
-                android:textColor="@color/text_light_purple"
-                android:id="@+id/terms"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Terms_of_Use"
-                android:onClick="terms"
-                android:paddingEnd="@dimen/letter_spacing" />
+<!--            <TextView-->
+<!--                android:textSize="12.0sp"-->
+<!--                android:textColor="@color/text_light_purple"-->
+<!--                android:id="@+id/terms"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/Terms_of_Use"-->
+<!--                android:onClick="terms"-->
+<!--                android:paddingEnd="@dimen/letter_spacing" />-->
             <TextView
                 android:textSize="12.0sp"
                 android:textColor="@color/text_light_purple"
                 android:id="@+id/privacy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Privacy_Policy"
+                android:text="سرویس های کوئیزشن موافقت میکنید."
                 android:onClick="privacy"
                 android:paddingEnd="@dimen/letter_spacing" />
-            <TextView
-                android:textSize="12.0sp"
-                android:textColor="@color/text_light_purple"
-                android:id="@+id/rules"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/and_b_Rules_b"
-                android:onClick="rules" />
+
         </LinearLayout>
     </LinearLayout>
     <include layout="@layout/debug_button" />

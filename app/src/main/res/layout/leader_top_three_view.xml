@@ -44,13 +44,20 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/grid_1"
-            android:text="19$"
+            android:text="Hossein"
             android:layout_marginBottom="@dimen/grid_1"
             android:maxLines="1"
             android:fontFamily="@font/circularstdmedium" />
         <TextView
             android:id="@+id/second_leader_balance"
+            android:text="200xp"
             style="@style/TextViewBalanceRounded" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="Level: 50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
@@ -84,7 +91,7 @@
             android:textColor="@color/text_primary"
             android:ellipsize="end"
             android:gravity="center"
-            android:text="19$"
+            android:text="Ahmad"
             android:id="@+id/first_leader_username"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -92,7 +99,14 @@
             android:layout_marginBottom="@dimen/grid_1"
             android:maxLines="1"
             android:fontFamily="@font/circularstdmedium" />
-        <TextView android:id="@+id/first_leader_balance" style="@style/TextViewBalanceRounded" />
+        <TextView android:id="@+id/first_leader_balance"
+            android:text="200xp"
+            style="@style/TextViewBalanceRounded" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="Level: 50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
@@ -121,21 +135,30 @@
                 android:fontFamily="@font/circularstdmedium"
                 android:backgroundTint="@color/hq_red" />
         </RelativeLayout>
+
         <TextView
-            android:textSize="16.0sp"
-            android:textColor="@color/text_primary"
-            android:ellipsize="end"
-            android:gravity="center"
             android:id="@+id/third_leader_username"
             android:layout_width="fill_parent"
-            android:text="19$"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/grid_1"
             android:layout_marginBottom="@dimen/grid_1"
+            android:ellipsize="end"
+            android:fontFamily="@font/circularstdmedium"
+            android:gravity="center"
             android:maxLines="1"
-            android:fontFamily="@font/circularstdmedium" />
+            android:text="Ali"
+            android:textColor="@color/text_primary"
+            android:textSize="16.0sp" />
+
         <TextView
             android:id="@+id/third_leader_balance"
+            android:text="200xp"
             style="@style/TextViewBalanceRounded" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="Level: 50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </LinearLayout>

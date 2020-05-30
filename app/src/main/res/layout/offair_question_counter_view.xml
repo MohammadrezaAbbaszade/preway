@@ -28,7 +28,7 @@
             android:id="@+id/offairQuestionCounterTitleView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Question"
+            android:text="سوال"
             android:textAllCaps="true"
             app:layout_constraintBottom_toTopOf="@+id/offairQuestionCounterValueView"
             app:layout_constraintEnd_toEndOf="@id/offairQuestionCounterBackgroundView"

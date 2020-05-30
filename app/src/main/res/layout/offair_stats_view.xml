@@ -23,7 +23,7 @@
         android:layout_height="@dimen/grid_3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_logo_white" />
+        app:srcCompat="@drawable/ic_main_logo" />
     <androidx.appcompat.widget.AppCompatTextView
         android:textSize="18.0sp"
         android:textColor="@color/white"

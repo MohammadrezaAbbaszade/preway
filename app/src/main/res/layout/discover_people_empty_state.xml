@@ -20,7 +20,6 @@
         android:layout_height="wrap_content"
         android:text="@string/Connect_with_your_friends_on_HQ_See_their_status_during_games_and_more_secret_friend_features_coming"
         android:lineSpacingExtra="1.1999817dip"
-        android:fontFamily="@font/circularstdbook"
         android:paddingStart="@dimen/grid_3"
         android:paddingEnd="@dimen/grid_3"
         app:autoSizeMaxTextSize="20.0sp"

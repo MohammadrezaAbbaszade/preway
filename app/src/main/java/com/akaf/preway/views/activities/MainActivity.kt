@@ -2,14 +2,17 @@ package com.akaf.preway.views.activities
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.util.TypedValue
 import android.view.MenuItem
+import android.view.View
 import com.akaf.preway.R
 import com.akaf.preway.views.fragments.*
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.main_hq_footer_menu.*
+
 
 class MainActivity : BaseActivity() {
 
@@ -32,8 +35,24 @@ class MainActivity : BaseActivity() {
         )
             .commit()
         setMenuItemsListeners()
-        bottomNavigationView.setSelectedItemId(R.id.page_lobby)
-        bottomNavigationView.setItemIconTintList(null);
+        bottomNavigationView.selectedItemId = R.id.page_lobby
+        bottomNavigationView.itemIconTintList = null;
+
+        val menuView =
+            bottomNavigationView.getChildAt(0) as BottomNavigationMenuView
+
+            val iconView: View =
+                menuView.getChildAt(2).findViewById(R.id.icon)
+            val layoutParams = iconView.layoutParams
+            val displayMetrics = resources.displayMetrics
+            layoutParams.height =
+                TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 38f, displayMetrics).toInt()
+            layoutParams.width =
+                TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 38f, displayMetrics).toInt()
+            iconView.layoutParams = layoutParams
+
+
+
 
 
     }

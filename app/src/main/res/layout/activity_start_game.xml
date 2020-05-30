@@ -106,7 +106,6 @@
                 android:layout_marginTop="@dimen/grid_4"
                 android:background="@drawable/bg_question_pill"
                 android:drawablePadding="@dimen/grid_1"
-                android:fontFamily="@font/circularstdmedium"
                 android:gravity="center"
                 android:paddingStart="@dimen/grid_3"
                 android:paddingTop="@dimen/grid_1"

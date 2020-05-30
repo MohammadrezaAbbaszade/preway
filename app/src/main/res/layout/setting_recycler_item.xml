@@ -23,7 +23,6 @@
             android:layout_width="@dimen/grid_4"
             android:layout_height="@dimen/grid_4"
             android:text="1"
-            android:fontFamily="@font/circularstdmedium"
             android:backgroundTint="@color/hq_yellow" />
     </RelativeLayout>
     <TextView
@@ -37,7 +36,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/grid_1"
         android:layout_marginBottom="@dimen/grid_1"
-        android:maxLines="1"
-        android:fontFamily="@font/circularstdmedium" />
+        android:maxLines="1" />
     <TextView android:id="@+id/first_leader_balance" style="@style/TextViewBalanceRounded" />
 </LinearLayout>

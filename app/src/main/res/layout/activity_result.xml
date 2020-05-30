@@ -20,7 +20,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="19dp"
             android:layout_marginBottom="2dp"
-            android:fontFamily="@font/circularstdbold"
             android:text="نتیجه پنج بازی"
             android:textColor="@color/white"
             android:textSize="@dimen/headline"
@@ -244,7 +243,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/grid_1"
                 android:drawableTop="@drawable/ic_group_small_2x"
-                android:fontFamily="@font/circularstdmedium"
 
                 android:gravity="center_vertical"
                 android:lines="1"
@@ -264,7 +262,6 @@
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/grid_1_half"
-                android:fontFamily="@font/circularstdmedium"
                 android:gravity="center_vertical"
                 android:lines="1"
                 android:text="53"

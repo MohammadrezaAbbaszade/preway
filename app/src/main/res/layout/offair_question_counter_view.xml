@@ -42,7 +42,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/grid_3_half"
-            android:fontFamily="@font/circularstdbold"
             app:layout_constraintBottom_toBottomOf="@id/offairQuestionCounterBackgroundView"
             app:layout_constraintEnd_toEndOf="@id/offairQuestionCounterBackgroundView"
             app:layout_constraintStart_toStartOf="@id/offairQuestionCounterBackgroundView"

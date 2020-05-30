@@ -32,7 +32,6 @@
                 android:layout_width="@dimen/grid_7_half"
                 android:layout_height="@dimen/grid_7_half"
                 android:text="2"
-                android:fontFamily="@font/circularstdmedium"
                 android:backgroundTint="@color/words_orange" />
         </RelativeLayout>
         <TextView
@@ -46,8 +45,7 @@
             android:layout_marginTop="@dimen/grid_1"
             android:text="Hossein"
             android:layout_marginBottom="@dimen/grid_1"
-            android:maxLines="1"
-            android:fontFamily="@font/circularstdmedium" />
+            android:maxLines="1" />
         <TextView
             android:id="@+id/second_leader_balance"
             android:text="200xp"
@@ -83,7 +81,6 @@
                 android:layout_width="@dimen/grid_4"
                 android:layout_height="@dimen/grid_4"
                 android:text="1"
-                android:fontFamily="@font/circularstdmedium"
                 android:backgroundTint="@color/hq_yellow" />
         </RelativeLayout>
         <TextView
@@ -98,7 +95,7 @@
             android:layout_marginTop="@dimen/grid_1"
             android:layout_marginBottom="@dimen/grid_1"
             android:maxLines="1"
-            android:fontFamily="@font/circularstdmedium" />
+            />
         <TextView android:id="@+id/first_leader_balance"
             android:text="200xp"
             style="@style/TextViewBalanceRounded" />
@@ -132,7 +129,6 @@
                 android:layout_width="@dimen/grid_3"
                 android:layout_height="@dimen/grid_3"
                 android:text="3"
-                android:fontFamily="@font/circularstdmedium"
                 android:backgroundTint="@color/hq_red" />
         </RelativeLayout>
 
@@ -143,7 +139,6 @@
             android:layout_marginTop="@dimen/grid_1"
             android:layout_marginBottom="@dimen/grid_1"
             android:ellipsize="end"
-            android:fontFamily="@font/circularstdmedium"
             android:gravity="center"
             android:maxLines="1"
             android:text="Ali"

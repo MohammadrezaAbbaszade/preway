@@ -24,7 +24,6 @@
             android:layout_width="fill_parent"
             android:layout_height="@dimen/grid_10"
             android:text="@string/Tell_us_about_your_n_experience"
-            android:fontFamily="@font/circularstdbold"
             app:autoSizeMaxTextSize="30.0sp"
             app:autoSizeMinTextSize="14.0sp"
             app:autoSizeTextType="uniform" />
@@ -37,7 +36,7 @@
             android:layout_height="@dimen/grid_11"
             android:layout_marginTop="@dimen/grid_3"
             android:text="@string/Your_detailed_feedback_helps_us_make_HQ_Trivia_better"
-            android:lineSpacingExtra="1.7999878sp" android:fontFamily="@font/circularstdbook"
+            android:lineSpacingExtra="1.7999878sp"
             app:autoSizeMaxTextSize="20.0sp" app:autoSizeMinTextSize="10.0sp"
             app:autoSizeTextType="uniform" />
         <LinearLayout

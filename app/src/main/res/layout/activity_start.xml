@@ -39,7 +39,6 @@
         android:layout_width="0.0dip"
         android:layout_height="wrap_content"
         android:text="preway"
-        android:fontFamily="@font/circularstdmedium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo" />
@@ -98,14 +97,14 @@
 <!--                android:onClick="terms"-->
 <!--                android:paddingEnd="@dimen/letter_spacing" />-->
             <TextView
-                android:textSize="12.0sp"
-                android:textColor="@color/text_light_purple"
                 android:id="@+id/privacy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="سرویس های کوئیزشن موافقت میکنید."
                 android:onClick="privacy"
-                android:paddingEnd="@dimen/letter_spacing" />
+                android:paddingEnd="@dimen/letter_spacing"
+                android:text="سرویس های Preway موافقت میکنید."
+                android:textColor="@color/text_light_purple"
+                android:textSize="12.0sp" />
 
         </LinearLayout>
     </LinearLayout>

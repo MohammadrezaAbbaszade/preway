@@ -38,7 +38,6 @@
         android:layout_marginTop="@dimen/grid_4"
         android:drawablePadding="@dimen/grid_1"
         android:drawableStart="@drawable/ic_star_selected"
-        android:fontFamily="@font/circularstdmedium"
         android:textAlignment="center"
         android:paddingStart="@dimen/grid_3"
         android:paddingEnd="@dimen/grid_3"

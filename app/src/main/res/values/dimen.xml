@@ -332,7 +332,7 @@
         <dimen name="profile_powerup_image_width_height">50.0dip</dimen>
         <dimen name="question_max_txt_size">24.0sp</dimen>
         <dimen name="question_min_txt_size">14.0sp</dimen>
-        <dimen name="rounded_button">30.0dip</dimen>
+        <dimen name="rounded_button">20.0dip</dimen>
         <dimen name="rounded_button_stroke_width">3.0dip</dimen>
         <item type="dimen" name="rounded_button_toolbar">@dimen/grid_3</item>
         <dimen name="subheadline">20.0sp</dimen>

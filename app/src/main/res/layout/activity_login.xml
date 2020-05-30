@@ -42,7 +42,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/grid_5"
-        android:fontFamily="@font/circularstdbook"
         android:layout_marginStart="@dimen/grid_4"
         android:layout_marginEnd="@dimen/grid_4" />
     <EditText android:textSize="@dimen/phone_verification_text"

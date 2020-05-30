@@ -21,7 +21,6 @@
             android:text="110"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:fontFamily="@font/circularstdbook"
             android:layout_marginEnd="@dimen/grid_1" />
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/leaderboard_avatar_image_view"
@@ -39,7 +38,6 @@
             android:layout_height="wrap_content"
             android:text="Alireza"
             android:layout_centerVertical="true"
-            android:fontFamily="@font/circularstdmedium"
             android:layout_marginEnd="@dimen/grid_2"
             android:layout_toStartOf="@+id/leaderboard_balance_text_view"
             android:layout_toEndOf="@id/leaderboard_avatar_image_view" />
@@ -65,7 +63,6 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:fontFamily="@font/circularstdbook"
                 />
         </LinearLayout>
     </RelativeLayout>

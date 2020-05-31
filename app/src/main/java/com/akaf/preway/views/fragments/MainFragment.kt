@@ -41,26 +41,12 @@ class MainFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_main, container, false)
         val recyclerViewImages = ArrayList<Int>()
         recyclerViewImages.add(1)
-//        initRecyclerView(recyclerViewImages, view)
 
-//        view.getHelpButton.setOnClickListener {
-//            val intent = HelpActivity.newIntent(context!!)
-//            startActivity(intent)
-//        }
-//        view.legalButton.setOnClickListener {
-//            val dialogView =
-//                getLayoutInflater().inflate(R.layout.fragment_bottom_sheet_dialog, null)
-//            val dialog = BottomSheetDialog(context!!)
-//            dialog.setContentView(dialogView)
-//            dialog.show()
-//
-//        }
-//
-//
-//        view.reviewUsButton.setOnClickListener {
-//
-//            showDialog(context!!)
-//        }
+        view.main_fragment_live_show_banner.setOnClickListener {
+            val intent = StartGameActivity.newIntent(context!!,true)
+            startActivity(intent)
+
+        }
 
         view.challengeButton.setOnClickListener {
 
@@ -69,11 +55,6 @@ class MainFragment : Fragment() {
 
         }
 
-        view.liveShowButton.setOnClickListener {
-
-            val intent = StartGameActivity.newIntent(context!!,true)
-            startActivity(intent)
-        }
         return view
     }
 

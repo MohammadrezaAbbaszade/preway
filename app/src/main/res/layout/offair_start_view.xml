@@ -62,15 +62,17 @@
 
     <LinearLayout
         android:id="@+id/start_game_powerup_buttons"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+       android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:layout_marginBottom="@dimen/grid_8"
+        android:orientation="horizontal"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:orientation="horizontal">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
         <LinearLayout
 
             android:layout_width="wrap_content"
@@ -83,8 +85,8 @@
                 android:layout_width="110dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:drawablePadding="8dp"
                 android:drawableTop="@drawable/ic_group_reclick"
+                android:drawablePadding="8dp"
                 android:text="شانس مجدد"
 
                 android:textAlignment="center"
@@ -105,8 +107,8 @@
                 android:layout_width="120dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:drawablePadding="8dp"
                 android:drawableTop="@drawable/ic_group_remove"
+                android:drawablePadding="8dp"
                 android:text="حذف دوگزینه"
 
                 android:textAlignment="center"
@@ -127,9 +129,9 @@
                 android:layout_width="110dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:drawablePadding="8dp"
-
                 android:drawableTop="@drawable/ic_group_users"
+
+                android:drawablePadding="8dp"
                 android:text="جواب مردم"
                 android:textAlignment="center"
                 android:textColor="#36399a"
@@ -140,13 +142,12 @@
 
     </LinearLayout>
 
-
     <LinearLayout
         android:id="@+id/powerups_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginBottom="@dimen/grid_8"
+     android:layout_marginBottom="10dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,56 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
     android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize">
+
     <LinearLayout
         android:id="@+id/setting_profile_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/text_view_button_percent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="50%"
             android:layout_marginEnd="10dp"
-            android:textColor="#000000"
+            android:text="50%"
             android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            />
-    <FrameLayout
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content">
-
-        <ProgressBar
-            android:id="@+id/setting_progress_bar"
-            android:progressDrawable="@drawable/progress_bar_states"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:indeterminate="false"
-            android:progress="50"
-            android:max="100"
-            android:secondaryProgress="100"
-            style="?android:attr/progressBarStyleHorizontal" />
-
-        <TextView
-            android:id="@+id/text_view_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ویرایش پروفایل"
             android:textColor="#000000"
-            android:padding="6dp"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:textStyle="bold" />
 
-    </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/setting_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="50"
+                android:progressDrawable="@drawable/progress_bar_states"
+                android:secondaryProgress="100" />
+
+            <TextView
+                android:id="@+id/text_view_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="تکمیل پروفایل"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
 
     </LinearLayout>
-</LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|end"
+        android:src="@drawable/ic_notif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toEndOf="@+id/setting_profile_progress"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

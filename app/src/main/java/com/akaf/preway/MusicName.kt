@@ -9,6 +9,7 @@ class MusicName{
         val OFFAIR_CORRECT="correct_general.mp3"
         val OFFAIR_INCORRECT="incorrect_general.mp3"
         val OFFAIR_TIMER="offair_timer.mp3"
+        val OFFAIR_SPLASH="offair_splash.mp3"
     }
 
 

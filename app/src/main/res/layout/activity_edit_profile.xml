@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/hq_blue"
+    android:layout_width="match_parent">
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:id="@+id/second_step"
-    android:background="@color/hq_blue"
+
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
@@ -29,7 +34,7 @@
         android:layout_width="fill_parent"
         android:layout_height="@dimen/grid_7"
         android:layout_marginTop="@dimen/grid_2"
-        android:maxLines="1" android:inputType="phone|textNoSuggestions"
+        android:maxLines="1"
         android:imeOptions="actionGo" android:paddingStart="@dimen/grid_3"
         android:paddingEnd="@dimen/grid_3"
         android:layout_marginStart="@dimen/grid_3"
@@ -80,31 +85,77 @@
         android:layout_width="fill_parent"
         android:layout_height="@dimen/grid_7"
         android:layout_marginTop="@dimen/grid_2"
-        android:maxLines="1" android:inputType="phone|textNoSuggestions"
+        android:maxLines="1" android:inputType="textEmailAddress"
         android:imeOptions="actionGo" android:paddingStart="@dimen/grid_3"
         android:paddingEnd="@dimen/grid_3"
         android:layout_marginStart="@dimen/grid_3"
         android:layout_marginEnd="@dimen/grid_3" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="تاریخ تولد رو انتخاب کن:"
+        android:textColor="@color/white"
+        android:layout_marginStart="12dp"
+        android:textSize="17sp"
+        android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:hint="سال"
+            android:maxLength="4"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textColorHint="@color/white"/>
+
+        <EditText
+            android:id="@+id/edit_profile_month_edtxt"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:hint="ماه"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:maxLength="2"
+            android:layout_gravity="center"
+            android:textColorHint="@color/white"/>
+
+        <EditText
+            android:id="@+id/edit_profile_day_edtxt"
+            android:layout_width="60dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:maxLength="2"
+            android:inputType="number"
+            android:hint="روز"
+            android:layout_gravity="center"
+            android:textColorHint="@color/white"/>
+
+
+    </LinearLayout>
     <LinearLayout
         android:gravity="center_horizontal"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_marginTop="8dp"
         android:paddingTop="@dimen/grid_2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="جنسیت:"
-    android:textStyle="bold"
-    android:textSize="20sp"
-    android:textColor="@color/white"
-    />
 
         <RadioGroup
             android:layout_width="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
             android:layout_height="wrap_content">
 
             <RadioButton
@@ -124,6 +175,37 @@
                 android:textColor="@color/white"/>
 
         </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="جنسیت:"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="دریافت اعلان"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
@@ -146,4 +228,6 @@
             android:layout_marginTop="@dimen/grid_2"
             style="?android:progressBarStyle" />
     </LinearLayout>
+
 </LinearLayout>
+</ScrollView>

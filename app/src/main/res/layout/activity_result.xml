@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<LinearLayout
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
     android:id="@+id/mainView"
     android:gravity="center"
     android:orientation="vertical"
@@ -426,7 +428,7 @@
 
         <FrameLayout
             android:id="@+id/twelve_questions_answer"
-            android:layout_width="350dp"
+            android:layout_width="fill_parent"
             android:layout_height="90dp"
             android:layout_gravity="center"
             android:layout_marginTop="18dp"
@@ -475,7 +477,7 @@
         <Button
             android:id="@id/nextGameButton"
             style="@style/ButtonRound"
-            android:layout_width="350dp"
+            android:layout_width="fill_parent"
             android:layout_height="75dp"
             android:layout_gravity="center"
             android:layout_marginTop="22dp"
@@ -504,3 +506,4 @@
     <include layout="@layout/coin_confirmation_view" />
     <include layout="@layout/modal_reconnecting" />
 </LinearLayout>
+</ScrollView>

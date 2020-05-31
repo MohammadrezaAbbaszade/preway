@@ -22,7 +22,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/second_leader_image_view"
                 android:layout_width="@dimen/grid_10"
-                android:background="@drawable/default_avatar"
+                android:background="@drawable/ranking_fifth_avatar"
                 android:layout_height="@dimen/grid_10" />
             <TextView android:textSize="16.0sp"
                 android:textColor="@color/white"
@@ -46,16 +46,16 @@
             android:text="Hossein"
             android:layout_marginBottom="@dimen/grid_1"
             android:maxLines="1" />
-        <TextView
-            android:id="@+id/second_leader_balance"
-            android:text="200xp"
-            style="@style/TextViewBalanceRounded" />
 
         <TextView
-            android:layout_marginTop="10dp"
-            android:text="Level: 50"
+
+            android:text="LVL.50"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/first_leader_balance2"
+            android:text="200xp"
+            android:layout_marginTop="10dp"
+            style="@style/TextViewBalanceRounded" />
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content">
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/first_leader_image_view"
-                android:background="@drawable/default_avatar"
+                android:background="@drawable/ranking_fourth_avatar"
                 android:layout_width="@dimen/grid_12"
                 android:layout_height="@dimen/grid_12" />
             <TextView android:textSize="18.0sp"
@@ -96,14 +96,16 @@
             android:layout_marginBottom="@dimen/grid_1"
             android:maxLines="1"
             />
-        <TextView android:id="@+id/first_leader_balance"
-            android:text="200xp"
-            style="@style/TextViewBalanceRounded" />
         <TextView
-            android:layout_marginTop="10dp"
-            android:text="Level: 50"
+
+            android:text="LVL.20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/first_leader_balance"
+            android:text="200xp"
+            android:layout_marginTop="10dp"
+            style="@style/TextViewBalanceRounded" />
+
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
@@ -116,11 +118,13 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/third_leader_image_view"
-                android:background="@drawable/default_avatar"
                 android:layout_width="@dimen/grid_9"
-                android:layout_height="@dimen/grid_9" />
+                android:layout_height="@dimen/grid_9"
+                android:background="@drawable/ranking_sixth_avatar" />
+
             <TextView android:textSize="14.0sp"
                 android:textColor="@color/white"
                 android:gravity="center"
@@ -141,19 +145,18 @@
             android:ellipsize="end"
             android:gravity="center"
             android:maxLines="1"
-            android:text="Ali"
+            android:text="Sara"
             android:textColor="@color/text_primary"
             android:textSize="16.0sp" />
 
         <TextView
-            android:id="@+id/third_leader_balance"
-            android:text="200xp"
-            style="@style/TextViewBalanceRounded" />
 
-        <TextView
-            android:layout_marginTop="10dp"
-            android:text="Level: 50"
+            android:text="LVL.10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/first_leader_balance3"
+            android:text="200xp"
+            android:layout_marginTop="10dp"
+            style="@style/TextViewBalanceRounded" />
     </LinearLayout>
 </LinearLayout>

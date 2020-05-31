@@ -20,7 +20,7 @@ class LeaderBoardAdapter(val context: Context, var productList: List<Int>) :
     }
 
     override fun getItemCount(): Int {
-        return 15
+        return 100
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -33,6 +33,11 @@ class LeaderBoardAdapter(val context: Context, var productList: List<Int>) :
         fun bind(image:Int){
             with(view){
                 leaderboard_rank_text_view.text=image.toString()
+                if(image%2==0){
+                    leaderboard_avatar_image_view.background=context.resources.getDrawable(R.drawable.ranking_fifth_avatar)
+                }else{
+                    leaderboard_avatar_image_view.background=context.resources.getDrawable(R.drawable.ranking_sixth_avatar)
+                }
             }
         }
     }

@@ -25,6 +25,7 @@
         android:id="@+id/verification_code"
         android:background="@drawable/edit_text_radious"
         android:layout_width="fill_parent"
+        android:maxLength="6"
         android:layout_height="@dimen/grid_7"
         android:layout_marginTop="@dimen/grid_2"
         android:hint="کد تایید را وارد کنید"
@@ -75,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/grid_3">
         <Button
-            android:enabled="true"
+            android:enabled="false"
             android:id="@+id/second_step_next_button"
             android:layout_width="@dimen/grid_27"
             android:layout_height="wrap_content"

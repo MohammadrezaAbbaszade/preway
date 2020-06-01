@@ -85,6 +85,7 @@
             android:textColor="@color/text_primary"
             android:textColorHint="@color/mid_grey"
             android:id="@+id/verification_edit_text"
+            android:textDirection="rtl"
             android:background="@drawable/edit_text_radious"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/grid_7"
@@ -93,6 +94,7 @@
             android:maxLines="1" android:inputType="phone|textNoSuggestions"
             android:imeOptions="actionGo" android:paddingStart="@dimen/grid_3"
             android:paddingEnd="@dimen/grid_3"
+            android:maxLength="11"
             android:layout_marginStart="@dimen/grid_3"
             android:layout_marginEnd="@dimen/grid_3"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -129,6 +131,7 @@
         android:layout_width="216dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:enabled="false"
         android:text="مرحله ی بعد"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
@@ -139,5 +142,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/verification_phone_number" />
 
+    <ProgressBar
+        android:id="@+id/first_verification_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        android:indeterminateTint="@color/hq_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verification_phone_number" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
